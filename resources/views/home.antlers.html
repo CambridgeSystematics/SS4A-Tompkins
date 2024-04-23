@@ -1,0 +1,36 @@
+<div class="hero">
+    {{# Replaces traditional header for the homepage #}}
+    <header>
+        <nav>
+          <div class="logo">
+            <object type="image/svg+xml" data="/template/SST-logo.svg">
+              <!-- fallback -->
+              <img src="/template/SST-logo.png" tags="true">
+            </object>
+          </div>
+          <ul class="links">
+          {{ nav:main_nav }}
+                <li class="nav-item"><a href="{{ url }}">{{ title }}</a></li>
+          {{ /nav:main_nav }}
+        </ul>
+        </nav>
+      </header>
+    {{# start of hero content #}}
+    <div class="hero-content">
+    {{ hero_content | markdown }}
+    <div class="btn-container">
+        {{ municipalities }} 
+        <div class="btn">
+            <img class="btn-icon" src="/template/{{ municipality_type }}-icon.svg" alt="{{ municipality_type }} icon">
+            <span>{{ municipality }}</span>
+        </div>
+        {{ /municipalities }}
+        </div>
+    </div>
+{{ sections }}
+{{ if type=="content" }}
+<div>
+{{ content }}
+</div>
+{{ /if }}
+{{ /sections }}

@@ -1,0 +1,132 @@
+// ----------------------------------------------
+// IMPORTS
+// ----------------------------------------------
+
+@import helpers
+
+
+
+// ----------------------------------------------
+// GLOBAL > HTML
+// ----------------------------------------------
+html
+body
+  background-color: #0A649A
+  font-family: 'Noto Sans', sans-serif
+  color: black
+  font-size: 16px
+  line-height: 1.5
+  font-family: UniversNext
+  font-weight: normal
+  font-style: normal
+  font-stretch: normal
+  position: static
+  max-width: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  overflow-x: hidden
+  margin: 0
+p, h1, h2, h3, span
+  font-family: 'Noto Sans', sans-serif
+.site-wrap
+    max-width: 120em
+    margin: 0 auto
+    overflow: hidden
+    -webkit-box-shadow: 0 0 4rem rgba(0, 0, 0, 0.75)
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.75)
+    background-color: #fff
+    position: relative
+
+.hero
+  background-image: linear-gradient(0deg, rgba(41, 95, 153, 0.25) 0%, rgba(41, 95, 153, 0) 100%), url(/assets/hero.webp)
+  min-height: 75em
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  position: relative
+  header
+    padding: 2em 4em
+    nav
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      flex-direction: row
+    .logo
+      order: 1
+      object
+        max-width: 300px
+    .links
+      order: 2
+      list-style: none
+      display: flex
+      flex-direction: row
+      a
+        color: #FFF
+        text-align: center
+        font-family: "Noto Sans"
+        font-size: 1.5rem
+        font-style: normal
+        font-weight: 500
+        text-decoration: none
+        margin: 0 1em
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, rgba(90, 90, 90, 0.00) 46.14%, rgba(90, 90, 90, 0.3) 50%)
+    z-index: 0
+  .hero-content
+    position: absolute
+    bottom: 0
+    align-items: center
+    margin: 0 15%
+    margin-bottom: 2em
+    text-align: center
+    font-size: 2rem
+    font-style: italic
+    font-weight: 900
+    line-height: normal
+    font-variant: small-caps
+    z-index: 1
+    p
+      color: white
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
+    strong
+      color: $orange
+
+    .btn-container
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      gap: 50px
+      justify-items: center
+      .btn
+        background-color: #E1EBF6
+        border: none
+        color: white
+        text-align: center
+        text-decoration: none
+        display: inline-block
+        font-size: 16px
+        margin: 4px 2px
+        cursor: pointer
+        border-radius: 15px
+        box-shadow: 0px 4px 0px 0px $blue
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 15px
+        height: 125px
+        width: 125px
+        justify-content: center
+        .btn-icon
+          width: 75px
+      span
+        color: $blue
+        font-size: 1.35rem
+        font-style: italic
+        font-weight: 600
+        line-height: normal    

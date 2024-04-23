@@ -1,0 +1,255 @@
+title: 'Home Page'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: section_field
+            field:
+              type: section
+              display: 'Hero Section'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: hero_content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Hero Content'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: municipalities
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                municipality:
+                  display: Municipality
+                  instructions: null
+                  icon: null
+                  sets:
+                    info:
+                      display: Municipality
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: municipality
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Name
+                            width: 66
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: municipality_type
+                          field:
+                            options:
+                              City: City
+                              Town: Town
+                              Village: Village
+                            inline: true
+                            cast_booleans: false
+                            type: radio
+                            display: Type
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                            width: 33
+              type: replicator
+              display: Municipalities
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: main_content
+            field:
+              type: section
+              display: 'Main Content'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: sections
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    content:
+                      display: Content
+                      instructions: null
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          handle: icon
+                          field:
+                            type: icon
+                            display: Icon
+                            width: 25
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: section_title
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Section Title'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                            width: 75
+                        -
+                          import: content
+                    charts:
+                      display: Charts
+                      instructions: null
+                      icon: money-graph-pie-chart
+                      fields: {  }
+                    callout:
+                      display: Callout
+                      instructions: null
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          handle: icon
+                          field:
+                            type: icon
+                            display: Icon
+                            width: 25
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: section_title
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Section Title'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                            width: 75
+                        -
+                          import: content
+                        -
+                          handle: background
+                          field:
+                            mode: list
+                            container: assets
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: Background
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                    announcements:
+                      display: Announcements
+                      instructions: null
+                      icon: null
+                      fields: {  }
+              type: replicator
+              display: Sections
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
