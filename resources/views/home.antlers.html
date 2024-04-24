@@ -27,10 +27,11 @@
         {{ /municipalities }}
         </div>
     </div>
-{{ sections }}
-{{ if type=="content" }}
-<div>
-{{ content }}
 </div>
-{{ /if }}
+{{ sections }}
+<div class="section {{ type}}-section">
+
+{{ partial:content }}
+
+</div>
 {{ /sections }}

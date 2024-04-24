@@ -138,7 +138,7 @@ tabs:
                   instructions: null
                   icon: null
                   sets:
-                    content:
+                    bard_content:
                       display: Content
                       instructions: null
                       icon: text-formatting-image-left
@@ -168,7 +168,8 @@ tabs:
                             hide_display: false
                             width: 75
                         -
-                          import: content
+                          handle: content
+                          field: content.content
                     charts:
                       display: Charts
                       instructions: null
@@ -204,7 +205,8 @@ tabs:
                             hide_display: false
                             width: 75
                         -
-                          import: content
+                          handle: content
+                          field: content.content
                         -
                           handle: background
                           field:
@@ -221,11 +223,6 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
-                    announcements:
-                      display: Announcements
-                      instructions: null
-                      icon: null
-                      fields: {  }
               type: replicator
               display: Sections
               listable: hidden

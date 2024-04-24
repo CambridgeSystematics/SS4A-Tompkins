@@ -5,12 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ site:site_title }}</title>
-        {{ theme:css src="safe-streets-roads-tompkins.css" tag="true"}}
-        {{ theme:js src="app.js" tag="true"}}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">    </head>
-    <body class="{{ if is_homepage }}homepage {{ /if }}">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {{ theme:css src="safe-streets-roads-tompkins.css" tag="true"}}
+        {{ theme:js src="safe-streets-roads-tompkins.js" tag="true"}}
+        </head>
+    <body class="{{ if is_homepage }}homepage{{ /if }}">
         <div class="site-wrap">
             {{ if !is_homepage }}
             {{ partial:header }}

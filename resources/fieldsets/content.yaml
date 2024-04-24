@@ -16,7 +16,7 @@ fields:
         - image
         - table
       smart_typography: false
-      save_html: false
+      save_html: true
       inline: false
       toolbar_mode: fixed
       reading_time: false

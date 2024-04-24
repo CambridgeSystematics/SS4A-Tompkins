@@ -1,0 +1,17 @@
+<div class="announcements">
+    <h2 class="section-title">Announcements</h2>
+    <div class="announcement-wrapper">
+        {{ collection:announcements }}
+            <div class="announcement active">
+                <div class="announcement-header">
+                    <h3>{{ title }}</h3>
+                    {{ partial:svg/dropdown-button }}
+                </div>
+                <div class="announcement-content">
+                    <p>{{ content }}</p>
+                </div>
+            </div>
+        {{ /collection:announcements }}
+    </div>
+</div>
+

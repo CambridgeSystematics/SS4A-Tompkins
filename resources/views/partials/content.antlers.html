@@ -1,0 +1,27 @@
+{{# start of bard content #}}
+{{ content }} 
+
+  {{# add image #}}
+
+  {{ if type == "add_image" }}
+  <div class="image-wrapper{{ if position == "Right" }} float-right{{ /if }}">
+    <img src="{{ image }}" alt="{{ alt }}" class="image">
+  </div>
+  {{ /if }}
+  
+  {{# text content #}}
+
+  {{ if type == "text" }}
+  <div class="text">
+    {{ text }}
+  </div>
+  {{/if }}
+
+  {{# add announcements #}}
+
+  {{ if type == "add_announcements" }}
+    {{ partial:announcements }}
+  {{ /if }}
+
+
+{{ /content }}
