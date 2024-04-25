@@ -15,6 +15,18 @@ fields:
         - anchor
         - image
         - table
+        - underline
+        - strikethrough
+        - small
+        - superscript
+        - subscript
+        - code
+        - codeblock
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
       smart_typography: false
       save_html: true
       inline: false
@@ -46,11 +58,56 @@ fields:
           instructions: null
           icon: null
           sets:
-            add_image:
-              display: Image
+            add_announcements:
+              display: Announcements
               instructions: null
               icon: null
+              fields: {  }
+            text_with_image:
+              display: 'Text with Image'
+              instructions: null
+              icon: form-text-field
               fields:
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
                 -
                   handle: image
                   field:
@@ -64,19 +121,19 @@ fields:
                     show_set_alt: true
                     type: assets
                     display: Image
+                    width: 75
                     listable: hidden
                     instructions_position: above
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
-                    width: 75
                 -
                   handle: position
                   field:
                     options:
                       Default: Default
-                      Left: 'Float Left'
-                      Right: 'Float Right'
+                      Left: Left
+                      Right: Right
                     taggable: false
                     push_tags: false
                     multiple: false
@@ -85,14 +142,10 @@ fields:
                     cast_booleans: false
                     type: select
                     display: Position
+                    width: 25
                     listable: hidden
                     instructions_position: above
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
-                    width: 25
-            add_announcements:
-              display: Announcements
-              instructions: null
-              icon: null
-              fields: {  }
+      container: assets

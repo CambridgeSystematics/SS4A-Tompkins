@@ -31,7 +31,15 @@
 {{ sections }}
 <div class="section {{ type}}-section">
 
-{{ partial:content }}
-
+<div class="callout-wrapper">
+  <div class="callout-content">
+  {{ partial:content }}
+  </div>
+</div>
+{{ if type == "callout" }}
+  <video autoplay loop muted class="bg-video">
+      <source src="{{ background }}" type="video/mp4">
+  </video>
+{{ /if}}
 </div>
 {{ /sections }}

@@ -223,6 +223,8 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
+                            max_files: 1
+                            min_files: 1
               type: replicator
               display: Sections
               listable: hidden

@@ -1,21 +1,27 @@
 {{# start of bard content #}}
-{{ content }} 
 
-  {{# add image #}}
+{{ if section_title }}
 
-  {{ if type == "add_image" }}
-  <div class="image-wrapper{{ if position == "Right" }} float-right{{ /if }}">
-    <img src="{{ image }}" alt="{{ alt }}" class="image">
-  </div>
-  {{ /if }}
+<h2 class="section-title">{{ icon }}{{ section_title }}</h2>
+{{ /if }}
+
+{{ content }}
   
   {{# text content #}}
 
   {{ if type == "text" }}
   <div class="text">
-    {{ text }}
+    {{ text | markdown }}
   </div>
   {{/if }}
+
+  {{ if type == "text_with_image" }}
+  <div class="text-wrapper {{ if position !== "default"  }}float-{{ position | lowercase }}">
+    <img src="{{ image }}" alt="{{ image_alt }}" class="content-image{{ /if }}">
+    {{ text | markdown }}
+  </div>
+  
+  {{ /if }}
 
   {{# add announcements #}}
 

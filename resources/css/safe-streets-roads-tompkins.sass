@@ -45,7 +45,7 @@ p
 .site-wrap
     max-width: 120em
     margin: 0 auto
-    overflow: hidden
+    overflow: visible
     -webkit-box-shadow: 0 0 4rem rgba(0, 0, 0, 0.75)
     box-shadow: 0 0 4rem rgba(0, 0, 0, 0.75)
     background-color: #fff
@@ -124,7 +124,7 @@ p
     right: 0
     bottom: 0
     align-items: center 
-    margin: 0 15% 4rem 15%  
+    margin: 0 10% 4rem 10%  
     text-align: center
     font-style: italic
     font-weight: 900
@@ -174,14 +174,31 @@ p
         font-weight: 600
         line-height: normal 
 .section
-  margin: 2rem 4rem
+  margin-bottom: 2rem
+  position: relative
+  &:last-child
+    margin-bottom: 0
   &.bard_content-section
-    .image-wrapper
-      filter: drop-shadow(-6px 15px 15px rgba(0, 0, 0, 0.35))
-      &.float-right
-        float: right
-        margin: 4rem
-
+    margin: 4rem
+.section-title 
+  svg
+    vertical-align: middle
+    fill: currentColor
+    width: 30px
+    height: 30px   
+    margin-right: 10px
+.text-wrapper
+  &.float-right, &.float-left
+    display: flex
+  &.float-right 
+    .content-image
+      order: 2
+  &.float-left
+    .content-image
+      order: 1
+.content-image
+  filter: drop-shadow(-6px 15px 15px rgba(0, 0, 0, 0.35))
+  margin: 0 4rem
 .announcements
   .announcement
     border-radius: 5px
@@ -225,9 +242,47 @@ p
       max-height: 0px
       overflow: hidden
       transition: max-height 0.2s ease-in-out  // Increase the duration as needed           
-
-
-      
+.callout-section
+  z-index: 1
+  position: sticky
+  top: 0
+  margin-bottom: 0
+  .section-title
+    color: white
+  .callout-wrapper
+    opacity: 0.85
+    width: 100%
+    background: linear-gradient(90deg,rgb(27, 54, 68, 1) 40%, rgb(27, 54, 68, 0) 70%)
+    .callout-content
+      width: 40%
+      padding: 4rem
+      p, ul
+        font-size: 1.5rem
+        font-style: italic
+        font-weight: 900
+        line-height: normal
+        font-variant: small-caps
+      p
+        color: white
+      ul p, ul
+        color: $orange !important
+      ul
+        padding-inline-start: 45px
+  .bg-video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    z-index: -1
+.charts-section
+  min-height: 2000px
+  z-index: 2
+  position: relative
+  background-color: $blue
+  border-radius: 1rem
+  top: -1rem
 
 
 
