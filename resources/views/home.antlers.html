@@ -1,18 +1,20 @@
 <div class="hero">
     {{# Replaces traditional header for the homepage #}}
-    <header>
+    <header class="hero-header">
         <nav>
-          <div class="logo">
-            <object type="image/svg+xml" data="/template/SST-logo.svg">
-              <!-- fallback -->
-              <img src="/template/SST-logo.png" tags="true">
-            </object>
-          </div>
-          <ul class="links">
-          {{ nav:main_nav }}
-                <li class="nav-item"><a href="{{ url }}">{{ title }}</a></li>
-          {{ /nav:main_nav }}
-        </ul>
+          <div class="nav-wrap">
+            <div class="logo">
+              <object type="image/svg+xml" data="/template/SST-logo.svg">
+                <!-- fallback -->
+                <img src="/template/SST-logo.png" tags="true">
+              </object>
+            </div>
+            <ul class="links">
+            {{ nav:main_nav }}
+                  <li class="nav-item"><a href="{{ url }}">{{ title }}</a></li>
+            {{ /nav:main_nav }}
+          </ul>
+      </div>
         </nav>
       </header>
     {{# start of hero content #}}

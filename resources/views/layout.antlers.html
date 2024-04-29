@@ -14,8 +14,8 @@
         </head>
     <body class="{{ if is_homepage }}homepage{{ /if }}">
         <div class="site-wrap">
-            {{ if !is_homepage }}
-            {{ partial:header }}
+            {{ if is_homepage }}
+            {{ partial:nav }}
             {{ /if }}
             {{ template_content }}
             {{# {{ partial:footer }} #}}

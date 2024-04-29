@@ -51,26 +51,33 @@ p
     background-color: #fff
     position: relative
 
-.hero
-  background-image: linear-gradient(0deg, rgba(41, 95, 153, 0.25) 0%, rgba(41, 95, 153, 0) 100%), url(/assets/hero.webp)
-  background-attachment: fixed
-  min-height: 75em
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: top center
-  position: relative
-  z-index: 1
-  header
-    padding: 2em 4em
-    nav
-      display: flex
-      justify-content: space-between
-      align-items: flex-start
-      flex-direction: row
+.main-nav
+  max-width: 120em
+  width: 100%
+  margin: 0 auto
+  overflow: visible
+.homepage
+  .main-nav
+    position: sticky
+    z-index: 10
+    transition: transform 0.3s ease-in-out
+    transform: translateY(-3rem)
+    top: 0
+    &.sticky
+      transform: translateY(0)
+  .site-wrap
+    margin-top: -3rem
+nav
+  .nav-wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-direction: row
     .logo
       order: 1
       object
         max-width: 300px
+        filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .3))
     .links
       order: 2
       list-style: none
@@ -90,25 +97,61 @@ p
           padding: .25em .5em
           overflow: hidden
           position: relative
-          &::before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            width: 0%
-            height: 100%
-            transition: width 0.2s ease-in-out
-            z-index: -1
-            border-radius: 5px
-          &:hover::before
-            width: 100%
-        &:nth-child(1n)a::before
-          background: $tangerine
-        &:nth-child(2n)a::before
-          background: $orange
-        &:nth-child(3n)a::before
-          background: $green    
-            
+        &:not(.scroll-to-top)
+          a
+            &::before
+              content: ""
+              position: absolute
+              top: 0
+              left: 0
+              width: 0%
+              height: 100%
+              transition: width 0.2s ease-in-out
+              z-index: -1
+              border-radius: 5px
+            &:hover::before
+              width: 100%
+          &:nth-child(1n)a::before
+            background: $tangerine
+          &:nth-child(2n)a::before
+            background: $orange
+          &:nth-child(3n)a::before
+            background: $green
+  &.main-nav
+    height: 3rem
+    background: linear-gradient(180deg, $dark-blue 90%, #97B7C8 100%)
+    .nav-wrap
+      margin: 0 4rem
+    .logo
+      margin: 10px 0
+      object
+        max-width: 400px
+        filter: none
+    .links
+      margin: 10px 0
+      .nav-item
+        margin: 0 1em
+        a
+          font-size: 1rem
+          margin: 0
+        &.scroll-to-top
+          a
+            color: $orange
+            font-size: .85rem
+            &::before
+              background: none
+
+.hero
+  background-image: linear-gradient(0deg, rgba(41, 95, 153, .25) 0%, rgba(41, 95, 153, 0) 100%), url(/assets/hero.webp)
+  background-attachment: fixed
+  min-height: 75em
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  position: relative
+  z-index: 1
+  .hero-header
+    padding: 2em 4em
   // &::before
   //   content: ''
   //   position: absolute
@@ -116,7 +159,7 @@ p
   //   left: 0
   //   width: 100%
   //   height: 100%
-  //   background: linear-gradient(180deg, rgba(90, 90, 90, 0.0) 50%, rgba(90, 90, 90, 0.3) 100%)
+  //   background: linear-gradient(180deg, rgba(41, 95, 153, 0) 50%, rgba(41, 95, 153, .1) 80%)
   //   z-index: 0
   .hero-content
     position: absolute
@@ -133,7 +176,7 @@ p
 
     p
       color: white
-      text-shadow: 0px 0px 1rem rgba(0, 0, 0, .8), 0px 0px 1rem rgba(0, 0, 0, .8)
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 1), 0px 0px 1rem rgba(0, 0, 0, .8)
       font-size: 2rem
     strong
       color: $orange

@@ -52,21 +52,33 @@ p {
   position: relative;
 }
 
-.hero {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(41, 95, 153, 0.25)), to(rgba(41, 95, 153, 0))), url(/assets/hero.webp);
-  background-image: linear-gradient(0deg, rgba(41, 95, 153, 0.25) 0%, rgba(41, 95, 153, 0) 100%), url(/assets/hero.webp);
-  background-attachment: fixed;
-  min-height: 75em;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  position: relative;
-  z-index: 1;
+.main-nav {
+  max-width: 120em;
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
 }
-.hero header {
-  padding: 2em 4em;
+
+.homepage .main-nav {
+  position: sticky;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+  top: 0;
 }
-.hero header nav {
+.homepage .main-nav.sticky {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.homepage .site-wrap {
+  margin-top: -3rem;
+}
+
+nav .nav-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,15 +93,17 @@ p {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.hero header .logo {
+nav .nav-wrap .logo {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
-.hero header .logo object {
+nav .nav-wrap .logo object {
   max-width: 300px;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
-.hero header .links {
+nav .nav-wrap .links {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -102,7 +116,7 @@ p {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.hero header .links .nav-item a {
+nav .nav-wrap .links .nav-item a {
   color: #FFF;
   text-align: center;
   font-family: "Noto Sans";
@@ -116,7 +130,7 @@ p {
   overflow: hidden;
   position: relative;
 }
-.hero header .links .nav-item a::before {
+nav .nav-wrap .links .nav-item:not(.scroll-to-top) a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -128,17 +142,65 @@ p {
   z-index: -1;
   border-radius: 5px;
 }
-.hero header .links .nav-item a:hover::before {
+nav .nav-wrap .links .nav-item:not(.scroll-to-top) a:hover::before {
   width: 100%;
 }
-.hero header .links .nav-item:nth-child(1n) a::before {
+nav .nav-wrap .links .nav-item:not(.scroll-to-top):nth-child(1n) a::before {
   background: #F24A00;
 }
-.hero header .links .nav-item:nth-child(2n) a::before {
+nav .nav-wrap .links .nav-item:not(.scroll-to-top):nth-child(2n) a::before {
   background: #FF8C00;
 }
-.hero header .links .nav-item:nth-child(3n) a::before {
+nav .nav-wrap .links .nav-item:not(.scroll-to-top):nth-child(3n) a::before {
   background: #65A98F;
+}
+nav.main-nav {
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #012536), to(#97B7C8));
+  background: linear-gradient(180deg, #012536 90%, #97B7C8 100%);
+}
+nav.main-nav .nav-wrap {
+  margin: 0 4rem;
+}
+nav.main-nav .logo {
+  margin: 10px 0;
+}
+nav.main-nav .logo object {
+  max-width: 400px;
+  -webkit-filter: none;
+          filter: none;
+}
+nav.main-nav .links {
+  margin: 10px 0;
+}
+nav.main-nav .links .nav-item {
+  margin: 0 1em;
+}
+nav.main-nav .links .nav-item a {
+  font-size: 1rem;
+  margin: 0;
+}
+nav.main-nav .links .nav-item.scroll-to-top a {
+  color: #FF8C00;
+  font-size: 0.85rem;
+}
+nav.main-nav .links .nav-item.scroll-to-top a::before {
+  background: none;
+}
+
+.hero {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(41, 95, 153, 0.25)), to(rgba(41, 95, 153, 0))), url(/assets/hero.webp);
+  background-image: linear-gradient(0deg, rgba(41, 95, 153, 0.25) 0%, rgba(41, 95, 153, 0) 100%), url(/assets/hero.webp);
+  background-attachment: fixed;
+  min-height: 75em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+.hero .hero-header {
+  padding: 2em 4em;
 }
 .hero .hero-content {
   position: absolute;
@@ -157,7 +219,7 @@ p {
 }
 .hero .hero-content p {
   color: white;
-  text-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.8), 0px 0px 1rem rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 0px rgb(0, 0, 0), 0px 0px 1rem rgba(0, 0, 0, 0.8);
   font-size: 2rem;
 }
 .hero .hero-content strong {
