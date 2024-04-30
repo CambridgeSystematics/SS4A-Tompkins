@@ -18,7 +18,9 @@
   {{ if type == "text_with_image" }}
   <div class="text-wrapper {{ if position !== "default"  }}float-{{ position | lowercase }}">
     <img src="{{ image }}" alt="{{ image_alt }}" class="content-image{{ /if }}">
+    <div class="content-text">
     {{ text | markdown }}
+    </div>
   </div>
   
   {{ /if }}

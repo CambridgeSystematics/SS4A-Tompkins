@@ -1,0 +1,20 @@
+<nav>
+  <div class="nav-wrap">
+      <div class="logo">
+        <a href="/">
+          <object type="image/svg+xml" data="/template/SST-logo.svg">
+            <!-- fallback -->
+            <img src="/template/SST-logo.png" tags="true">
+          </object>
+        </a>
+      </div>
+    <ul class="links">
+      {{ if !is_homepage }}
+        <li class="nav-item home"><a href="/">{{ partial:svg/home }}Home</a></li>
+      {{ /if }}
+    {{ nav:main_nav }}
+          <li class="nav-item {{ slug }}{{ if is_current }} active{{ /if }}"><a href="{{ url }}">{{ if has_icon }}{{ partial:svg/{{ slug }} }}{{ /if }}{{ title }}</a></li>
+    {{ /nav:main_nav }}
+  </ul>
+</div>
+</nav>

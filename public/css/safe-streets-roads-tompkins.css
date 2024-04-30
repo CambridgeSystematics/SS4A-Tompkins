@@ -14,6 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   margin: 0;
+  min-height: 100vh;
 }
 
 p, h1, h2, h3, span {
@@ -38,6 +39,22 @@ h2, .section-title {
   line-height: normal;
 }
 
+.page-title {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+  color: white;
+  margin: 4rem 0 0 0;
+}
+.page-title svg {
+  vertical-align: middle;
+  fill: currentColor;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
 p {
   font-size: 18px;
 }
@@ -52,14 +69,11 @@ p {
   position: relative;
 }
 
-.main-nav {
+.sticky-nav {
   max-width: 120em;
   width: 100%;
   margin: 0 auto;
   overflow: visible;
-}
-
-.homepage .main-nav {
   position: sticky;
   z-index: 10;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -70,10 +84,11 @@ p {
           transform: translateY(-3rem);
   top: 0;
 }
-.homepage .main-nav.sticky {
+.sticky-nav.sticky {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
+
 .homepage .site-wrap {
   margin-top: -3rem;
 }
@@ -98,10 +113,14 @@ nav .nav-wrap .logo {
       -ms-flex-order: 1;
           order: 1;
 }
+nav .nav-wrap .logo a {
+  display: block;
+}
 nav .nav-wrap .logo object {
   max-width: 300px;
   -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
 }
 nav .nav-wrap .links {
   -webkit-box-ordinal-group: 3;
@@ -124,11 +143,28 @@ nav .nav-wrap .links .nav-item a {
   font-style: normal;
   font-weight: 500;
   text-decoration: none;
-  margin: 0 0.5em;
+  margin: 0 0.25em;
   cursor: pointer;
   padding: 0.25em 0.5em;
   overflow: hidden;
   position: relative;
+}
+nav .nav-wrap .links .nav-item a svg {
+  width: 1rem;
+  margin-right: 5px;
+  height: 1rem;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+nav .nav-wrap .links .nav-item:hover svg {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 nav .nav-wrap .links .nav-item:not(.scroll-to-top) a::before {
   content: "";
@@ -144,47 +180,67 @@ nav .nav-wrap .links .nav-item:not(.scroll-to-top) a::before {
 }
 nav .nav-wrap .links .nav-item:not(.scroll-to-top) a:hover::before {
   width: 100%;
+  opacity: 1;
 }
-nav .nav-wrap .links .nav-item:not(.scroll-to-top):nth-child(1n) a::before {
-  background: #F24A00;
+nav .nav-wrap .links .nav-item.active a::before {
+  width: 100%;
 }
-nav .nav-wrap .links .nav-item:not(.scroll-to-top):nth-child(2n) a::before {
-  background: #FF8C00;
+nav .nav-wrap .links .nav-item.active a svg {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
-nav .nav-wrap .links .nav-item:not(.scroll-to-top):nth-child(3n) a::before {
-  background: #65A98F;
+nav .nav-wrap .links .nav-item.home a::before {
+  background: #0A73AF !important;
 }
-nav.main-nav {
+nav .nav-wrap .links .nav-item.resources a::before {
+  background: #F24A00 !important;
+}
+nav .nav-wrap .links .nav-item.project-materials a::before {
+  background: #FF8C00 !important;
+}
+nav .nav-wrap .links .nav-item.maps a::before {
+  background: #65A98F !important;
+}
+nav.sticky-nav {
   height: 3rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #012536), to(#97B7C8));
   background: linear-gradient(180deg, #012536 90%, #97B7C8 100%);
 }
-nav.main-nav .nav-wrap {
+nav.sticky-nav .nav-wrap {
   margin: 0 4rem;
 }
-nav.main-nav .logo {
+nav.sticky-nav .logo {
   margin: 10px 0;
 }
-nav.main-nav .logo object {
+nav.sticky-nav .logo a {
+  display: block;
+}
+nav.sticky-nav .logo object {
   max-width: 400px;
   -webkit-filter: none;
           filter: none;
+  pointer-events: none;
 }
-nav.main-nav .links {
+nav.sticky-nav .links {
   margin: 10px 0;
 }
-nav.main-nav .links .nav-item {
+nav.sticky-nav .links .nav-item {
   margin: 0 1em;
 }
-nav.main-nav .links .nav-item a {
+nav.sticky-nav .links .nav-item a {
   font-size: 1rem;
   margin: 0;
 }
-nav.main-nav .links .nav-item.scroll-to-top a {
+nav.sticky-nav .links .nav-item a svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+nav.sticky-nav .links .nav-item.scroll-to-top a {
   color: #FF8C00;
   font-size: 0.85rem;
 }
-nav.main-nav .links .nav-item.scroll-to-top a::before {
+nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   background: none;
 }
 
@@ -346,6 +402,7 @@ nav.main-nav .links .nav-item.scroll-to-top a::before {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  max-width: 600px;
 }
 .text-wrapper.float-left .content-image {
   -webkit-box-ordinal-group: 2;
@@ -356,7 +413,12 @@ nav.main-nav .links .nav-item.scroll-to-top a::before {
 .content-image {
   -webkit-filter: drop-shadow(-6px 15px 15px rgba(0, 0, 0, 0.35));
           filter: drop-shadow(-6px 15px 15px rgba(0, 0, 0, 0.35));
-  margin: 0 4rem;
+  margin-left: 4rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: sticky;
+  top: 4rem;
 }
 
 .announcements .announcement {
@@ -488,4 +550,30 @@ nav.main-nav .links .nav-item.scroll-to-top a::before {
   background-color: #0A73AF;
   border-radius: 1rem;
   top: -1rem;
+}
+
+.subpage nav .nav-wrap .logo object {
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.1));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.1));
+}
+
+.page-header {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, rgba(27, 54, 68, 0.5)), to(rgba(27, 54, 68, 0))), url(/assets/hero.webp);
+  background-image: linear-gradient(90deg, rgba(27, 54, 68, 0.5) 40%, rgba(27, 54, 68, 0) 100%), url(/assets/hero.webp);
+  padding: 2rem 4rem 2rem 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  position: relative;
+  z-index: 1;
+}
+
+.page-content {
+  padding: 2rem 4rem;
+}
+.page-content .content-text h2:first-child {
+  margin-top: 0;
+}
+.page-content .content-text ul li p {
+  margin: 10px 0;
 }

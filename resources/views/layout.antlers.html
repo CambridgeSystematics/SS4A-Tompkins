@@ -12,10 +12,10 @@
         {{ theme:css src="safe-streets-roads-tompkins.css" tag="true"}}
         {{ theme:js src="safe-streets-roads-tompkins.js" tag="true"}}
         </head>
-    <body class="{{ if is_homepage }}homepage{{ /if }}">
+    <body class="{{ if is_homepage }}homepage{{ else }}{{ slug }}-page subpage{{ /if }}">
         <div class="site-wrap">
             {{ if is_homepage }}
-            {{ partial:nav }}
+            {{ partial:sticky-nav }}
             {{ /if }}
             {{ template_content }}
             {{# {{ partial:footer }} #}}

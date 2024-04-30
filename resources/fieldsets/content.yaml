@@ -32,13 +32,13 @@ fields:
       inline: false
       toolbar_mode: fixed
       reading_time: false
-      word_count: false
+      word_count: true
       fullscreen: true
       allow_source: true
       enable_input_rules: true
       enable_paste_rules: true
       remove_empty_nodes: false
-      antlers: false
+      antlers: true
       link_noopener: false
       link_noreferrer: false
       target_blank: false

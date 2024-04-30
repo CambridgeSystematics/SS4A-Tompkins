@@ -1,0 +1,18 @@
+<nav class="sticky-nav">
+        <div class="nav-wrap">
+                <div class="logo">
+                        <a href="/">
+                                <object type="image/svg+xml" data="/template/SST-logo-horizontal.svg">
+                                <!-- fallback -->
+                                <img src="/template/SST-logo-horizontal.png" tags="true">
+                                </object>
+                        </a>
+                </div>
+                <ul class="links">
+                        <li class="nav-item scroll-to-top"><a href="/">Back to Top</a></li>
+                {{ nav:main_nav }}
+                <li class="nav-item {{slug}}{{ if is_current }} active{{ /if }}"><a href="{{ url }}">{{ if has_icon }}{{ partial:svg/{{ slug }} }}{{ /if }}{{ title }}</a></li>
+                {{ /nav:main_nav }}
+        </ul>
+        </div>
+</nav>
