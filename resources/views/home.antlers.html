@@ -18,20 +18,35 @@
 {{ sections }}
 <div class="section {{ type}}-section">
 
-{{ if type == "bard_content" }}
-<div class="bard-content">
-  {{ partial:content }}
-</div>
-{{ /if }}
-{{ if type == "callout" }}
-<div class="callout-wrapper">
-  <div class="callout-content">
-  {{ partial:content }}
+  {{# Bard Content #}}
+  {{ if type == "bard_content" }}
+
+  <div class="bard-content">
+    {{ partial:content }}
   </div>
-</div>
-  <video autoplay loop muted class="bg-video">
-      <source src="{{ background }}" type="video/mp4">
-  </video>
-{{ /if}}
+
+  {{ /if }}
+
+  {{# Callout #}}
+  {{ if type == "callout" }}
+
+  <div class="callout-wrapper">
+    <div class="callout-content">
+    {{ partial:content }}
+    </div>
+  </div>
+    <video autoplay loop muted class="bg-video">
+        <source src="{{ background }}" type="video/mp4">
+    </video>
+
+  {{ /if}}
+
+  {{# Charts #}}
+  {{ if type == "charts"}}
+
+  {{ partial:charts}}
+
+  {{ /if}}
+
 </div>
 {{ /sections }}

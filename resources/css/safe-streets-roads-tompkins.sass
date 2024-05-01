@@ -370,15 +370,22 @@ nav
     object-fit: cover
     z-index: -1
 .charts-section
-  min-height: 2000px //temporary, remove when content is added
+  // min-height: 2000px //temporary, remove when content is added
   z-index: 2
   position: relative
   background-color: $blue
-  border-radius: 1rem
-  top: -1rem
+  border-radius: 1rem 1rem 0 0
+  padding: $content-padding
+  margin-bottom: 0
+  margin-top: -1rem
+  .chart-container
+    background-color: rgba(255, 255, 255, 0.9)
+    padding: 1rem 1.5rem
 .subpage
   nav .nav-wrap .logo object 
     filter: drop-shadow( 0px 0px 5px rgba(255, 255, 255, .1))
+  footer
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, .5)
 .page-header
   background-image: linear-gradient(90deg, rgba(27, 54, 68, 0.5) 40%, rgba(27, 54, 68, 0) 100%), url(/assets/hero.webp)
   padding: $content-padding*.5 $content-padding $content-padding*.5 $content-padding
@@ -395,3 +402,36 @@ nav
         margin-top: 0
     ul li p
       margin: 10px 0
+footer
+  background-image: url(/assets/hero.webp)
+  background-color: rgba(27, 54, 68, .6) // Set the color of the overlay here
+  background-blend-mode: multiply
+  background-size: cover
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-position: bottom center
+  position: relative
+  z-index: 2
+  margin: 0
+  display: flex
+  .footer-content
+    padding: $content-padding 0
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    gap: 10px
+    .logo 
+      a
+        display: block
+      object
+        max-width: 300px
+        filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .3))
+        pointer-events: none
+    .copyright
+      color: white
+.maps-page
+  .page-content
+    background: $blue
+    iframe
+      border: $orange 2px solid
+      filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, .5))

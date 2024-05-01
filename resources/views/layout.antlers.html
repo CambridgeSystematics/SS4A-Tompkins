@@ -9,16 +9,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script> <!-- Include Highcharts library -->
         {{ theme:css src="safe-streets-roads-tompkins.css" tag="true"}}
         {{ theme:js src="safe-streets-roads-tompkins.js" tag="true"}}
-        </head>
+
+    </head>
     <body class="{{ if is_homepage }}homepage{{ else }}{{ slug }}-page subpage{{ /if }}">
         <div class="site-wrap">
             {{ if is_homepage }}
             {{ partial:sticky-nav }}
             {{ /if }}
             {{ template_content }}
-            {{# {{ partial:footer }} #}}
-        </div>
+            {{ partial:footer }}
+        </div> 
     </body>
 </html>
