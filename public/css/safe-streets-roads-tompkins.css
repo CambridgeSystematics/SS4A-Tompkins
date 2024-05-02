@@ -556,6 +556,9 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 1rem 1.5rem;
 }
+.charts-section .source {
+  padding: 0 1rem;
+}
 
 .subpage nav .nav-wrap .logo object {
   -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.1));
