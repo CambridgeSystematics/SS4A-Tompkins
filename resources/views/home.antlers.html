@@ -8,7 +8,7 @@
     <div class="btn-container">
         {{ municipalities }} 
         <div class="btn">
-            <img class="btn-icon" src="/template/{{ municipality_type }}-icon.svg" alt="{{ municipality_type }} icon">
+            <img class="btn-icon" src="/template/{{ municipality_type | lower }}-icon.svg" alt="{{ municipality_type }} icon">
             <span>{{ municipality }}</span>
         </div>
         {{ /municipalities }}
