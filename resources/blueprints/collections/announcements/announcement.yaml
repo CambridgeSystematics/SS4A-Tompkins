@@ -14,7 +14,7 @@ tabs:
               validate:
                 - required
           -
-            handle: url
+            handle: announcement_url
             field:
               input_type: text
               antlers: false

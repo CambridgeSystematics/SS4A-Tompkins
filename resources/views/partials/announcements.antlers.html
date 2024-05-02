@@ -4,7 +4,17 @@
         {{ collection:announcements }}
             <div class="announcement active">
                 <div class="announcement-header">
-                    <h3>{{ title }}</h3>
+                    {{ if announcement_url}}
+                        <a href="{{ announcement_url }}">
+                        <h3>
+                        {{ title }}
+                        </h3>
+                        </a>
+                    {{ else }}
+                    <h3>
+                    {{ title }}
+                    </h3>
+                    {{ /if }}
                     {{ partial:svg/dropdown-button }}
                 </div>
                 <div class="announcement-content">
