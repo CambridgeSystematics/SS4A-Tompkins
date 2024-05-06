@@ -437,3 +437,69 @@ footer
     iframe
       border: $orange 2px solid
       filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, .5))
+
+// Media Query 1300px
+@media (max-width: 1301px)
+  .hero
+    .hero-content
+      position: relative
+      margin-bottom: $content-padding + 3rem
+      .btn-container
+        grid-template-rows: repeat(5, 1fr) // 5 rows
+        grid-template-columns: repeat(2, 1fr) // 2 columns
+        gap: 1rem 2.5rem
+        justify-content: center
+        .btn
+          height: 100px
+          width: 100%
+          padding: 10px
+          .btn-icon
+            width: 75px
+            margin-right: 10px
+          span
+            font-size: 1.5rem
+
+
+// Media Query 1200px
+@media (max-width: 1201px)
+  .site-wrap
+    max-width: 100%
+  .hero-header
+    nav
+      .nav-wrap
+        flex-direction: column
+        align-items: center
+      
+  .text-wrapper
+    align-items: center
+    flex-direction: column
+    margin-bottom: $content-padding
+    &.float-right, &.float-left
+      order: 2
+    &.float-right 
+      .content-image
+        margin-left: 0
+    &.float-left
+      .content-image
+        margin-left: 0
+  .callout-wrapper
+    .callout-content
+      width: 100%
+  // .charts-section
+  //   padding: $content-padding*.5
+  .page-header
+    padding: $content-padding*.5 $content-padding $content-padding*.5 $content-padding
+  .page-content
+    padding: $content-padding*.5 $content-padding
+  footer
+    .footer-content
+      padding: $content-padding 0
+  .maps-page
+    iframe
+      border: $orange 1px solid
+      filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .5))
+
+// Media Query 768px
+@media (max-width: 768px)
+  .hero-header
+    padding: $content-padding/2 !important
