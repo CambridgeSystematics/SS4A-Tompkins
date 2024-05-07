@@ -199,7 +199,7 @@ nav .nav-wrap .links .nav-item.resources a::before {
 nav .nav-wrap .links .nav-item.project-materials a::before {
   background: #FF8C00 !important;
 }
-nav .nav-wrap .links .nav-item.maps a::before {
+nav .nav-wrap .links .nav-item.comment-map a::before {
   background: #65A98F !important;
 }
 nav.sticky-nav {
