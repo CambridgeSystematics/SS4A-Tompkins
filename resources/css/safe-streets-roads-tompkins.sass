@@ -71,11 +71,41 @@ p
   overflow: visible
   position: sticky
   z-index: 10
-  transition: transform 0.3s ease-in-out
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out
   transform: translateY(-3rem)
   top: 0
   &.sticky
     transform: translateY(0)
+  &.nav-small
+    background: linear-gradient(180deg, $dark-blue 95%, #97B7C8 100%)
+    overflow: hidden
+    &.menu-small-active
+      height: 10em
+    .logo
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: baseline
+      .menu-icon
+        display: block
+        cursor: pointer
+    .nav-wrap
+      flex-direction: column
+      .links
+        display: flex
+        flex-direction: column
+        padding-left: 0
+        margin-top: 0
+        a
+          display: block
+          text-align: left
+        .nav-item
+          padding-left: 0
+          margin: 0
+          svg
+            opacity: 1
+        .scroll-to-top
+          display: none
 .homepage
   .site-wrap
     margin-top: -3rem
@@ -93,6 +123,8 @@ nav
         max-width: 300px
         filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .3))
         pointer-events: none
+      .menu-icon
+        display: none
     .links
       order: 2
       list-style: none

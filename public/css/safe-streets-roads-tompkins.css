@@ -76,10 +76,10 @@ p {
   overflow: visible;
   position: sticky;
   z-index: 10;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   -webkit-transform: translateY(-3rem);
           transform: translateY(-3rem);
   top: 0;
@@ -87,6 +87,61 @@ p {
 .sticky-nav.sticky {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+.sticky-nav.nav-small {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(95%, #012536), to(#97B7C8));
+  background: linear-gradient(180deg, #012536 95%, #97B7C8 100%);
+  overflow: hidden;
+}
+.sticky-nav.nav-small.menu-small-active {
+  height: 10em;
+}
+.sticky-nav.nav-small .logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.sticky-nav.nav-small .logo .menu-icon {
+  display: block;
+  cursor: pointer;
+}
+.sticky-nav.nav-small .nav-wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sticky-nav.nav-small .nav-wrap .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+  margin-top: 0;
+}
+.sticky-nav.nav-small .nav-wrap .links a {
+  display: block;
+  text-align: left;
+}
+.sticky-nav.nav-small .nav-wrap .links .nav-item {
+  padding-left: 0;
+  margin: 0;
+}
+.sticky-nav.nav-small .nav-wrap .links .nav-item svg {
+  opacity: 1;
+}
+.sticky-nav.nav-small .nav-wrap .links .scroll-to-top {
+  display: none;
 }
 
 .homepage .site-wrap {
@@ -121,6 +176,9 @@ nav .nav-wrap .logo object {
   -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
   pointer-events: none;
+}
+nav .nav-wrap .logo .menu-icon {
+  display: none;
 }
 nav .nav-wrap .links {
   -webkit-box-ordinal-group: 3;

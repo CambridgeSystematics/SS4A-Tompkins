@@ -29,6 +29,7 @@ $(document).ready(function() {
   var observerRemove = new IntersectionObserver(function(entries) {
     if (entries[0].isIntersecting && isSticky) {
       stickyNav.classList.remove('sticky');
+      $('.sticky-nav').removeClass('menu-small-active');
       isSticky = false;
     }
   }, { threshold: [0.12] }); // T´hreshold for removing the sticky class
@@ -44,4 +45,22 @@ $(document).ready(function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
  
+  // Sticky nav small
+  var mql = window.matchMedia('(max-width: 1300px)');
+  function handleViewportChange(e) {
+    if (e.matches) {
+      // If viewport width is 1300px or less
+      $('.sticky-nav').addClass('nav-small');
+    } else {
+      // If viewport width is more than 1300px
+      $('.sticky-nav').removeClass('nav-small');
+    }
+  }
+  mql.addListener(handleViewportChange); // Attach listener function on state changes
+  handleViewportChange(mql); // Call listener function at run time
+
+  $('.menu-icon').click(function() {
+    $('.sticky-nav').toggleClass('menu-small-active');
+  });
+
 });
