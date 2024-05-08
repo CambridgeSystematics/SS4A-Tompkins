@@ -1,11 +1,23 @@
 <div class="chart-container">
-<div id="myChart"></div> <!-- Container for the chart -->
+<div id="chart1"></div> <!-- Container for the chart -->
 <script>
-  Highcharts.chart('myChart', {
+  Highcharts.chart('chart1', {
     chart: {
       type: 'column',
       backgroundColor: 'rgba(255, 255, 255, 0)',
       height: 600
+    },
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 768 // Apply the following chart options if the viewport width is 768px or less
+        },
+        chartOptions: {
+          chart: {
+            height: 400 // Set the chart height to 400px
+          }
+        }
+      }]
     },
     title: {
     text: 'Fatalities',
@@ -111,3 +123,223 @@
 </script>
 <p class="source">source: TSSR (ITSMR)</p>
 </div>
+
+<div class="chart-container">
+  <div id="chart2"></div> <!-- Container for the chart -->
+  <script>
+    Highcharts.chart('chart2', {
+      chart: {
+        type: 'column',
+        backgroundColor: 'rgba(255, 255, 255, 0)',
+        height: 600
+      },
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 768 // Apply the following chart options if the viewport width is 768px or less
+          },
+          chartOptions: {
+            chart: {
+              height: 400 // Set the chart height to 400px
+            }
+          }
+        }]
+      },
+      title: {
+      text: 'Serious Injuries',
+      align: 'left',
+      margin: 50,
+      style: {
+        color: '#012536',
+        fontSize: '24px',
+        fontWeight: '800',
+        fontFamily: 'Noto Sans',
+        fontStyle: 'italic'
+      }
+      },
+      xAxis: {
+        categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+        lineColor: '#012536',
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        title: {
+          text: 'Year',
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '18px'
+          }
+        }
+      },
+      yAxis: [{
+        title: {
+          text: '# of Serious Injuries',
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        },
+        lineColor: '#012536', 
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        tickPositions: [0, 20, 40, 60, 80, 100, 120, 140, 160], // Set static values for the ticks on the second y-axis
+        tickAmount: 8,
+        labels: {
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        }
+      },
+      {
+        title: {
+          text: '', // Add a title for the second y-axis
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        },
+        lineColor: '#012536', 
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        tickPositions: [11000, 11050, 11100, 11150, 11200, 11250, 11300, 11350, 11400], // Set static values for the ticks on the second y-axis
+        tickAmount: 8,
+        labels: {
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          },
+          formatter: function() {
+            return this.value.toLocaleString(); // Convert the value to a string with a comma as a thousand separator
+          }
+        },
+        opposite: true // Display the second y-axis on the right side of the chart
+      }],
+      legend: {
+        symbolHeight: 12, // Set the height of the legend symbol to 2
+        symbolWidth: 12, // Set the width of the legend symbol to 30
+        symbolRadius: 0 // Set the radius of the legend symbol to 0
+      },
+      series: [{
+        name: 'Tompkins',
+        data: [122, 142, 113, 131, 92, 114, 113, 81, 91, 101],
+        color: '#F24A00',
+        borderWidth: 0
+      }, {
+        name: '5-Year Average',
+        type: 'line', // Set the type of this series to 'line'
+        data: [null, null, null, null, 11251, 11245, 11235, 11220, 11198, 11202], // Add the data for the line series
+        color: '#FF8C00',
+        yAxis: 1
+      },
+      {
+        name: 'NYS Average',
+        type: 'line', // Set the type of this series to 'line'
+        data: [null, null, null, null, 11225, 11120, 11280, 11220, 11145, 11230], // Add the data for the line series
+        color: '#65A98F',
+        yAxis: 1
+      }],
+      tooltip: {
+        formatter: function() {
+          return '<tspan style="font-size: 0.8em">' + this.point.category + '</tspan><br>' + this.series.name + ': <b>' + Highcharts.numberFormat(this.y, 0, '.', ',') + '</b> serious injuries';
+        },
+      },
+    });
+  </script>
+  <p class="source">source: TSSR (ITSMR)</p>
+  </div>
+
+<div class="chart-container">
+  <div id="chart3"></div> <!-- Container for the chart -->
+  <script>
+    Highcharts.chart('chart3', {
+      chart: {
+        type: 'line',
+        backgroundColor: 'rgba(255, 255, 255, 0)',
+        height: 600
+      },
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 768 // Apply the following chart options if the viewport width is 768px or less
+          },
+          chartOptions: {
+            chart: {
+              height: 400 // Set the chart height to 400px
+            }
+          }
+        }]
+      },
+      title: {
+      text: 'Fatalities per 100M VMT',
+      align: 'left',
+      margin: 50,
+      style: {
+        color: '#012536',
+        fontSize: '24px',
+        fontWeight: '800',
+        fontFamily: 'Noto Sans',
+        fontStyle: 'italic'
+      }
+      },
+      xAxis: {
+        categories: ['2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+        lineColor: '#012536',
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        title: {
+          text: 'Year',
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '18px'
+          }
+        }
+      },
+      yAxis: {
+        title: {
+          text: '# of Serious Injuries',
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        },
+        lineColor: '#012536', 
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        tickPositions: [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6], // Set static values for the ticks on the second y-axis
+        tickAmount: 8,
+        labels: {
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        }
+      },
+      series: [{
+        name: 'Tompkins',
+        data: [1.29, 1.1, 0.42, 0.95, 0.98, 1.32, 0.91],
+        color: '#F24A00',
+        borderWidth: 0
+      },
+      {
+        name: 'NYS Average',
+        type: 'line', // Set the type of this series to 'line'
+        data: [0.85, 0.8, 0.75, 0.74, 1.0, 0.98, 0.99], // Add the data for the line series
+        color: '#65A98F',
+      }],
+      tooltip: {
+        formatter: function() {
+          return '<tspan style="font-size: 0.8em">' + this.point.category + '</tspan><br>' + this.series.name + ': <b>' + this.y + '</b> fatalities per 100M VMT';
+        },
+      },
+    });
+  </script>
+  <p class="source">source: TSSR (ITSMR)</p>
+  </div>

@@ -276,7 +276,7 @@ nav
         display: inline-block
         font-size: 16px
         margin: 4px 2px
-        cursor: pointer
+        // cursor: pointer
         border-radius: 15px
         box-shadow: 0px 4px 0px 0px $blue
         display: flex
@@ -311,6 +311,7 @@ nav
 .text-wrapper
   &.float-right, &.float-left
     display: flex
+    justify-content: space-between
   &.float-right 
     .content-image
       order: 2
@@ -413,6 +414,7 @@ nav
   .chart-container
     background-color: rgba(255, 255, 255, 0.9)
     padding: 1rem 1.5rem
+    margin: $content-padding/2
   .source
     padding: 0 1rem
 .subpage
@@ -473,21 +475,22 @@ footer
 // Media Query 1300px
 @media (max-width: 1301px)
   .hero
+    padding: 2rem 0
     .hero-content
       position: relative
-      margin-bottom: $content-padding + 3rem
       .btn-container
-        grid-template-rows: repeat(5, 1fr) // 5 rows
-        grid-template-columns: repeat(2, 1fr) // 2 columns
+        grid-template-rows: repeat(3, 1fr) // 5 rows
+        grid-template-columns: repeat(3, 1fr) // 2 columns
         gap: 1rem 2.5rem
         justify-content: center
+        gap: 1rem
         .btn
-          height: 100px
-          width: 100%
-          padding: 10px
+          // height: 100px
+          // width: 100%
+          // padding: 10px
           .btn-icon
-            width: 75px
-            margin-right: 10px
+            // width: 75px
+            // margin-right: 10px
           span
             font-size: 1.5rem
 
@@ -503,11 +506,12 @@ footer
         align-items: center
       
   .text-wrapper
-    align-items: center
     flex-direction: column
     margin-bottom: $content-padding
     &.float-right, &.float-left
       order: 2
+      img
+        align-self: center
     &.float-right 
       .content-image
         margin-left: 0
@@ -535,3 +539,9 @@ footer
 @media (max-width: 768px)
   .hero-header
     padding: $content-padding/2 !important
+  .page-content
+    .text-wrapper
+      img
+        width: 100%
+  .charts-section
+    padding: $content-padding/4 !important

@@ -400,7 +400,6 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  cursor: pointer;
   border-radius: 15px;
   -webkit-box-shadow: 0px 4px 0px 0px #0A73AF;
           box-shadow: 0px 4px 0px 0px #0A73AF;
@@ -455,6 +454,9 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .text-wrapper.float-right .content-image {
   -webkit-box-ordinal-group: 3;
@@ -613,6 +615,7 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
 .charts-section .chart-container {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 1rem 1.5rem;
+  margin: 2rem;
 }
 .charts-section .source {
   padding: 0 1rem;
@@ -698,19 +701,22 @@ footer .footer-content .copyright {
 }
 
 @media (max-width: 1301px) {
+  .hero {
+    padding: 2rem 0;
+  }
   .hero .hero-content {
     position: relative;
-    margin-bottom: 7rem;
   }
   .hero .hero-content .btn-container {
-    -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    -ms-grid-columns: 1fr 2.5rem 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem 2.5rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 1rem;
   }
   .hero .hero-content .btn-container > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -721,45 +727,32 @@ footer .footer-content .copyright {
     -ms-grid-column: 3;
   }
   .hero .hero-content .btn-container > *:nth-child(3) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
   }
   .hero .hero-content .btn-container > *:nth-child(4) {
     -ms-grid-row: 3;
-    -ms-grid-column: 3;
-  }
-  .hero .hero-content .btn-container > *:nth-child(5) {
-    -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
-  .hero .hero-content .btn-container > *:nth-child(6) {
-    -ms-grid-row: 5;
+  .hero .hero-content .btn-container > *:nth-child(5) {
+    -ms-grid-row: 3;
     -ms-grid-column: 3;
   }
+  .hero .hero-content .btn-container > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
   .hero .hero-content .btn-container > *:nth-child(7) {
-    -ms-grid-row: 7;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
   .hero .hero-content .btn-container > *:nth-child(8) {
-    -ms-grid-row: 7;
+    -ms-grid-row: 5;
     -ms-grid-column: 3;
   }
   .hero .hero-content .btn-container > *:nth-child(9) {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-  }
-  .hero .hero-content .btn-container > *:nth-child(10) {
-    -ms-grid-row: 9;
-    -ms-grid-column: 3;
-  }
-  .hero .hero-content .btn-container .btn {
-    height: 100px;
-    width: 100%;
-    padding: 10px;
-  }
-  .hero .hero-content .btn-container .btn .btn-icon {
-    width: 75px;
-    margin-right: 10px;
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
   }
   .hero .hero-content .btn-container .btn span {
     font-size: 1.5rem;
@@ -779,9 +772,6 @@ footer .footer-content .copyright {
             align-items: center;
   }
   .text-wrapper {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -792,6 +782,11 @@ footer .footer-content .copyright {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .text-wrapper.float-right img, .text-wrapper.float-left img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .text-wrapper.float-right .content-image {
     margin-left: 0;
@@ -820,5 +815,11 @@ footer .footer-content .copyright {
 @media (max-width: 768px) {
   .hero-header {
     padding: 2rem !important;
+  }
+  .page-content .text-wrapper img {
+    width: 100%;
+  }
+  .charts-section {
+    padding: 1rem !important;
   }
 }
