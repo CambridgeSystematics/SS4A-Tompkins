@@ -21,6 +21,7 @@ $(document).ready(function() {
 
   var heroHeader = document.querySelector('.hero');
   var stickyNav = document.querySelector('.sticky-nav');
+  var mqlSticky = window.matchMedia('(max-width: 768px)');
   var isSticky = false; // Flag to track whether the sticky class is currently applied
 
 
@@ -32,7 +33,7 @@ $(document).ready(function() {
   }, { threshold: [0.1] });
 
   var observerRemove = new IntersectionObserver(function(entries) {
-    if (entries[0].isIntersecting && isSticky && heroHeader.getBoundingClientRect().top >= 0){
+    if (entries[0].isIntersecting && isSticky && !mqlSticky.matches){
       stickyNav.classList.remove('sticky');
       $('.sticky-nav').removeClass('menu-small-active');
       isSticky = false;
@@ -45,7 +46,6 @@ $(document).ready(function() {
 
 // observe viewport width and toggle sticky nav if it is 768px or less
 
-  var mqlSticky = window.matchMedia('(max-width: 768px)');
   window.onload = function() {
     if (mqlSticky.matches) {
       // If viewport width is 768px or less
