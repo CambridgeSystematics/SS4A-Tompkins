@@ -101,18 +101,53 @@ sections:
             type: text_with_image
             text:
               -
+                type: heading
+                attrs:
+                  level: 3
+                content:
+                  -
+                    type: text
+                    marks:
+                      -
+                        type: bold
+                    text: 'SS4A-Joint Safety Action Plan'
+              -
                 type: paragraph
                 content:
                   -
                     type: text
-                    text: "The Plan will provide recommendations and strategies to improve safety at identified locations and help eliminate deaths and serious injuries throughout the region. The goal is to help make Tompkins County safer for all road users including people who drive, walk, bike, or ride transit.\_\_"
-                  -
-                    type: hardBreak
+                    text: "The Joint Safety Action Plan will provide recommendations and strategies to improve safety at identified locations and help eliminate deaths and serious injuries throughout the region. The goal is to help make Tompkins County safer for all road users including people who drive, walk, bike, or ride transit.\_\_"
+              -
+                type: heading
+                attrs:
+                  level: 3
+                content:
                   -
                     type: text
-                    text: "\_"
+                    marks:
+                      -
+                        type: bold
+                    text: 'Data Driven Analysis'
+              -
+                type: paragraph
+                content:
                   -
-                    type: hardBreak
+                    type: text
+                    text: "This Plan utilizes an innovative data-driven approach to improving safety in the County through first analyzing roadway characteristics, traffic volumes, and local crashes to understand the key factors affecting safety outcomes throughout the transportation network. Additionally, the crash analysis will be conducted to tell a story through data tables and figures about where, when, and why crashes are occurring in the region. As a part of this safety analysis, the project team will execute a network screening approach to evaluate individual corridors and intersections and prepare a prioritized list of location-specific and systemic network treatments.\_\_"
+              -
+                type: heading
+                attrs:
+                  level: 3
+                content:
+                  -
+                    type: text
+                    marks:
+                      -
+                        type: bold
+                    text: 'Safety for Everyone'
+              -
+                type: paragraph
+                content:
                   -
                     type: text
                     text: "This Plan utilizes an innovative data-driven approach to improving safety in the County through first analyzing roadway characteristics, traffic volumes, and local crashes to understand the key factors affecting safety outcomes throughout the transportation network. Additionally, the crash analysis will be conducted to tell a story through data tables and figures about where, when, and why crashes are occurring in the region. As a part of this safety analysis, the project team will execute a network screening approach to evaluate individual corridors and intersections and prepare a prioritized list of location-specific and systemic network treatments.\_\_"
@@ -120,19 +155,21 @@ sections:
                     type: hardBreak
                   -
                     type: text
-                    text: "\_"
-                  -
-                    type: hardBreak
-                  -
-                    type: text
                     text: "Equity and inclusion considerations are a priority for each step of the Plan development including the analysis, engagement, location prioritization, and improvement selection process. This will improve the strategies by more accurately representing existing challenges and opportunities, while ensuring an emphasis on equitable countermeasure implementation.\_\_"
-                  -
-                    type: hardBreak
+              -
+                type: heading
+                attrs:
+                  level: 3
+                content:
                   -
                     type: text
-                    text: "\_"
-                  -
-                    type: hardBreak
+                    marks:
+                      -
+                        type: bold
+                    text: 'Solutions Through Outreach'
+              -
+                type: paragraph
+                content:
                   -
                     type: text
                     text: "The project team will develop a toolkit of best practices to address the key factors, create a prioritized list of projects, a resolution stating the County’s support for Towards Zero Deaths, recommendations for improving safety beyond infrastructure solutions, and a final report and implementation plan. Throughout this process the project team will work with transportation safety stakeholders, coordinate with state partners, and seek input from Tompkins County residents. For more information on various aspects of this project please review the project resources page and follow the links in the announcements below.\_"
@@ -207,5 +244,5 @@ sections:
     type: charts
     enabled: true
 updated_by: b996fbb7-6158-4be5-b58b-7f5ccae6509f
-updated_at: 1714079979
+updated_at: 1715625253
 ---

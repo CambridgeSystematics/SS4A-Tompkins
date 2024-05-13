@@ -33,6 +33,7 @@ $(document).ready(function() {
   }, { threshold: [0.1] });
 
   var observerRemove = new IntersectionObserver(function(entries) {
+    // Remove sticky if it has sticky class, hero header is in view, and viewport width over 768px
     if (entries[0].isIntersecting && isSticky && !mqlSticky.matches){
       stickyNav.classList.remove('sticky');
       $('.sticky-nav').removeClass('menu-small-active');
@@ -48,7 +49,6 @@ $(document).ready(function() {
 
   window.onload = function() {
     if (mqlSticky.matches) {
-      // If viewport width is 768px or less
       stickyNav.classList.add('sticky');
       isSticky = true;
     }
