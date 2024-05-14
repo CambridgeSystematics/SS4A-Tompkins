@@ -112,6 +112,11 @@ p {
   display: block;
   cursor: pointer;
 }
+.sticky-nav.nav-small .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .sticky-nav.nav-small .nav-wrap {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -419,9 +424,26 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 .hero .hero-content .btn-container .btn .btn-icon {
   width: 75px;
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+.hero .hero-content .btn-container .btn:hover {
+  background-color: #d6e5f2;
+  -webkit-box-shadow: 0px 4px 0px 0px #FF8C00;
+          box-shadow: 0px 4px 0px 0px #FF8C00;
+}
+.hero .hero-content .btn-container .btn:hover .btn-icon, .hero .hero-content .btn-container .btn:hover span {
+  -webkit-filter: drop-shadow(0px 0px 2px rgba(255, 140, 0, 0.7));
+          filter: drop-shadow(0px 0px 2px rgba(255, 140, 0, 0.7));
 }
 .hero .hero-content .btn-container span {
   color: #0A73AF;
@@ -429,6 +451,10 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   font-style: italic;
   font-weight: 600;
   line-height: normal;
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
 }
 
 .section {
@@ -701,9 +727,6 @@ footer .footer-content .copyright {
 }
 
 @media (max-width: 1301px) {
-  .hero {
-    padding: 2rem 0;
-  }
   .hero .hero-content {
     position: relative;
   }
@@ -754,12 +777,16 @@ footer .footer-content .copyright {
     -ms-grid-row: 5;
     -ms-grid-column: 5;
   }
-  .hero .hero-content .btn-container .btn span {
-    font-size: 1.5rem;
-  }
   .hero .hero-content .btn-container .btn:last-child {
     -ms-grid-column: 2;
     grid-column: 2;
+  }
+  .callout-section .callout-wrapper {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgb(27, 54, 68)), to(rgba(27, 54, 68, 0)));
+    background: linear-gradient(90deg, rgb(27, 54, 68) 50%, rgba(27, 54, 68, 0) 100%);
+  }
+  .callout-section .callout-wrapper .callout-content {
+    width: 70%;
   }
 }
 @media (max-width: 1201px) {
@@ -830,6 +857,9 @@ footer .footer-content .copyright {
   nav.sticky-nav .logo object {
     max-width: 300px;
   }
+  .hero {
+    padding: 4rem 0 2rem 0;
+  }
   .hero .hero-header {
     padding: 2rem !important;
   }
@@ -839,8 +869,45 @@ footer .footer-content .copyright {
   .hero .hero-content p {
     font-size: 1.5rem;
   }
+  .hero .hero-content .btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero .hero-content .btn-container .btn {
+    padding: 0.5rem;
+    height: 2.5rem;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    border-radius: 0.66rem;
+  }
+  .hero .hero-content .btn-container .btn .btn-icon {
+    width: 2.5rem;
+    margin-right: 10px;
+  }
+  .hero .hero-content .btn-container .btn span {
+    font-size: 1.5rem;
+  }
   .page-content .text-wrapper img, .bard-content .text-wrapper img {
     width: 100%;
+    max-width: 450px !important;
+  }
+  .callout-section .callout-wrapper {
+    background: rgba(27, 54, 68, 0.8);
+  }
+  .callout-section .callout-wrapper .callout-content {
+    width: inital;
+    padding: 4rem;
   }
   .charts-section {
     padding: 1rem !important;
