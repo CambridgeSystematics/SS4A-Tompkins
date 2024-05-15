@@ -16,9 +16,7 @@
     </head>
     <body class="{{ if is_homepage }}homepage{{ else }}{{ slug }}-page subpage{{ /if }}">
         <div class="site-wrap">
-            {{ if is_homepage }}
             {{ partial:sticky-nav }}
-            {{ /if }}
             {{ template_content }}
             {{ partial:footer }}
         </div> 
