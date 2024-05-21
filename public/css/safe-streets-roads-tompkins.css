@@ -922,3 +922,19 @@ footer .footer-content .copyright {
     padding: 1rem !important;
   }
 }
+.chart-container {
+  padding: 1.5rem 2.5rem !important;
+  position: relative;
+}
+.chart-container h2 {
+  color: #012536;
+  font-size: 1.5rem;
+}
+.chart-container img {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+.chart-container .source {
+  padding: 0 !important;
+}
