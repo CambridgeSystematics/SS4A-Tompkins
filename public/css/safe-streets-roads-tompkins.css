@@ -172,9 +172,9 @@ nav .nav-wrap .logo {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 nav .nav-wrap .logo a {
   display: block;
@@ -867,6 +867,17 @@ footer .footer-content .copyright {
   }
 }
 @media (max-width: 768px) {
+  .hero .hero-content {
+    margin: 2rem;
+  }
+  .section.bard_content-section {
+    margin: 2rem;
+  }
+  nav.sticky-nav.nav-small .logo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   nav.sticky-nav .nav-wrap {
     margin: 0 1rem;
   }
@@ -897,7 +908,7 @@ footer .footer-content .copyright {
   .hero .hero-content .btn-container .btn {
     padding: 0.5rem;
     height: 2.5rem;
-    width: 100%;
+    width: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -923,10 +934,23 @@ footer .footer-content .copyright {
   }
   .callout-section .callout-wrapper .callout-content {
     width: inital;
-    padding: 4rem;
+    padding: 2rem;
   }
   .charts-section {
     padding: 1rem !important;
+  }
+  .charts-section .chart-container {
+    padding: 1rem !important;
+    margin: 1rem;
+  }
+  .charts-section .chart-container h2 {
+    font-size: 1rem;
+  }
+  .charts-section .chart-container img {
+    width: 100%;
+  }
+  .charts-section .chart-container .source {
+    font-size: 0.8rem;
   }
 }
 .chart-container {

@@ -119,7 +119,7 @@ nav
     flex-direction: row
     .logo
       order: 1
-      align-items: center
+      align-items: baseline
       a
         display: block
       object
@@ -566,11 +566,19 @@ footer
 
 // Media Query 768px
 @media (max-width: 768px)
+  .hero .hero-content
+    margin: 2rem
+  .section.bard_content-section
+    margin: $content-padding/2
   nav.sticky-nav
+    &.nav-small
+      .logo
+        align-items: center
     .nav-wrap
       margin: 0 1rem
-    .logo object
-      max-width: 300px
+    .logo 
+      object
+        max-width: 300px
   .hero
     padding: 4rem 0 2rem 0
     .hero-header
@@ -587,7 +595,7 @@ footer
         .btn
           padding: .5rem
           height: 2.5rem
-          width: 100%
+          width: auto
           flex-direction: row
           justify-content: left
           border-radius: .66rem
@@ -606,9 +614,19 @@ footer
       background: rgba(27, 54, 68, .8)
       .callout-content
         width: inital
-        padding: 4rem
+        padding: $content-padding/2
   .charts-section
     padding: $content-padding/4 !important
+    .chart-container
+      padding: 1rem !important
+      margin: 1rem
+      h2
+        font-size: 1rem
+      img
+        width: 100%
+      .source
+        font-size: .8rem
+
 
 //temp chart css
 
