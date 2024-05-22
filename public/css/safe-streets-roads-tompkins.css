@@ -312,8 +312,8 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
 }
 
 .hero {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(41, 95, 153, 0.25)), to(rgba(41, 95, 153, 0))), url(/assets/hero.webp);
-  background-image: linear-gradient(0deg, rgba(41, 95, 153, 0.25) 0%, rgba(41, 95, 153, 0) 100%), url(/assets/hero.webp);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(41, 95, 153, 0.25)), to(rgba(41, 95, 153, 0))), url(/assets/hero-min.webp);
+  background-image: linear-gradient(0deg, rgba(41, 95, 153, 0.25) 0%, rgba(41, 95, 153, 0) 100%), url(/assets/hero-min.webp);
   background-attachment: fixed;
   min-height: 75em;
   background-size: cover;
@@ -685,7 +685,7 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
 }
 
 footer {
-  background-image: url(/assets/hero.webp);
+  background-image: url(/assets/hero-min.webp);
   background-color: rgba(27, 54, 68, 0.6);
   background-blend-mode: multiply;
   background-size: cover;
