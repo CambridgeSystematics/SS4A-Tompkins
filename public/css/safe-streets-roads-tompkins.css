@@ -863,6 +863,9 @@ footer .footer-content .copyright {
   }
 }
 @media (max-width: 768px) {
+  nav.sticky-nav .nav-wrap {
+    margin: 0 1rem;
+  }
   nav.sticky-nav .logo object {
     max-width: 300px;
   }
