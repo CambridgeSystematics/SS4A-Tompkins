@@ -675,7 +675,7 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
 }
 
 .page-content {
-  padding: 2rem 4rem;
+  margin: 2rem 4rem;
 }
 .page-content .content-text h2:first-child {
   margin-top: 0;
@@ -855,7 +855,7 @@ footer .footer-content .copyright {
     padding: 2rem 4rem 2rem 4rem;
   }
   .page-content {
-    padding: 2rem 4rem;
+    margin: 2rem;
   }
   footer .footer-content {
     padding: 4rem 0;
