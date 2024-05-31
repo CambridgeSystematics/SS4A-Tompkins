@@ -944,6 +944,9 @@ footer .footer-content .copyright {
   .charts-section .chart-container h2 {
     font-size: 1rem;
   }
+  .charts-section .chart-container h2 span {
+    font-size: 0.8rem;
+  }
   .charts-section .chart-container img {
     width: 100%;
   }
@@ -958,6 +961,12 @@ footer .footer-content .copyright {
 .chart-container h2 {
   color: #012536;
   font-size: 1.5rem;
+}
+.chart-container h2 span {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
 }
 .chart-container img {
   width: 90%;

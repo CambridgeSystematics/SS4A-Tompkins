@@ -1,29 +1,396 @@
-<div class="chart-container" id="chart1">
-<h2>Fatalities</h2>
-<img src="/assets/charts/1716298949425-ab03e72b-344c-4694-8aa9-31c6f96f2fda_15.jpg">
+<div class="chart-container">
+  <h2 class="chart-title">Fatalities <span>in Tompkins County and New York State</span></h2>
+  <div id="chart1"></div> <!-- Container for the chart -->
+  <script>
+    Highcharts.chart('chart1', {
+      credits: {
+        enabled: false
+      },
+      chart: {
+        type: 'column',
+        backgroundColor: 'rgba(255, 255, 255, 0)',
+        height: 600
+      },
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 768 // Apply the following chart options if the viewport width is 768px or less
+          },
+          chartOptions: {
+            chart: {
+              height: 400 // Set the chart height to 400px
+            }
+          }
+        }]
+      },
+      title: {
+      text: null,
+      align: 'left',
+      margin: 50,
+      style: {
+        color: '#012536',
+        fontSize: '24px',
+        fontWeight: '800',
+        fontFamily: 'Noto Sans',
+        fontStyle: 'italic'
+      }
+      },
+      xAxis: {
+        categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+        lineColor: '#012536',
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        title: {
+          text: null,
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '18px'
+          }
+        }
+      },
+      yAxis: [{
+        title: {
+          text: null,
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        },
+        lineColor: '#012536', 
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        tickPositions: [0, 2, 4, 6, 8, 10, 12, 14], // Set static values for the ticks on the second y-axis
+        tickAmount: 8,
+        labels: {
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        }
+      },
+      {
+        title: {
+          text: '', // Add a title for the second y-axis
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        },
+        lineColor: '#012536', 
+        tickColor: '#012536',
+        gridLineColor: '#0A73AF',
+        gridLineWidth: 0,
+        tickPositions: [0, 200, 400, 600, 800, 1000, 1200], // Set static values for the ticks on the second y-axis
+        tickAmount: 8,
+        labels: {
+          style: {
+            color: '#012536',
+            fontFamily: 'Noto Sans',
+            fontSize: '16px'
+          }
+        },
+        opposite: true // Display the second y-axis on the right side of the chart
+      }],
+      legend: {
+        symbolHeight: 12, // Set the height of the legend symbol to 2
+        symbolWidth: 12, // Set the width of the legend symbol to 30
+        symbolRadius: 0 // Set the radius of the legend symbol to 0
+      },
+      series: [{
+        name: 'Tompkins',
+        data: [5, 13, 10, 8, 3, 7, 6, 9, 5, 9],
+        color: '#F24A00',
+        borderWidth: 0
+      }, {
+        name: '5-Year Average',
+        type: 'line', // Set the type of this series to 'line'
+        data: [null, null, null, 8.8, 7.8, 8.2, 6.8, 6.6, 6.0, 7.2], // Add the data for the line series
+        color: '#FF8C00',
+      },
+      {
+        name: 'NYS 5-Yr Average',
+        type: 'line', // Set the type of this series to 'line'
+        data: [null, null, null, 1071.8, 1021.4, 1003.8, 987.0, 1006.4, 1038.8, 1060.0], // Add the data for the line series
+        color: '#65A98F',
+        yAxis: 1
+      },
+      {
+        name: 'Upstate 5-Yr Average',
+        type: 'line', // Set the type of this series to 'line'
+        data: [null, null, null, 488.2, 472.0, 466.6, 466.8, 477.2, 491.6, 504.6], // Add the data for the line series
+        color: '#0A73AF',
+        yAxis: 1
+      }],
+      tooltip: {
+        formatter: function() {
+          return '<tspan style="font-size: 0.8em">' + this.point.category + '</tspan><br>' + this.series.name + ': <b>' + Highcharts.numberFormat(this.y, 0, '.', ',') + '</b> deaths';
+        },
+      },
+    });
+  </script>
   <p class="source">source: TSSR (ITSMR)</p>
-</div>
-
-<div class="chart-container" id="chart2">
-<h2>Serious Injuries</h2>
-<img src="/assets/charts/1716298949425-ab03e72b-344c-4694-8aa9-31c6f96f2fda_16.jpg">
-  <p class="source">source: TSSR (ITSMR)</p>
-</div>
-
-<div class="chart-container" id="chart3">
-  <h2>Bicyclist & Pedestrian (Fatal & Serious Injury)</h2>
-  <img src="/assets/charts/1716298949425-ab03e72b-344c-4694-8aa9-31c6f96f2fda_17.jpg">
+  </div>
+  
+  <div class="chart-container">
+    <h2 class="chart-title">Serious Injuries <span>in Tompkins County and New York State</span></h2>
+    <div id="chart2"></div> <!-- Container for the chart -->
+    <script>
+      Highcharts.chart('chart2', {
+        credits: {
+          enabled: false
+        },
+        chart: {
+          type: 'column',
+          backgroundColor: 'rgba(255, 255, 255, 0)',
+          height: 600
+        },
+        responsive: {
+          rules: [{
+            condition: {
+              maxWidth: 768 // Apply the following chart options if the viewport width is 768px or less
+            },
+            chartOptions: {
+              chart: {
+                height: 400 // Set the chart height to 400px
+              }
+            }
+          }]
+        },
+        title: {
+        text: null,
+        align: 'left',
+        margin: 50,
+        style: {
+          color: '#012536',
+          fontSize: '24px',
+          fontWeight: '800',
+          fontFamily: 'Noto Sans',
+          fontStyle: 'italic'
+        }
+        },
+        xAxis: {
+          categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+          lineColor: '#012536',
+          tickColor: '#012536',
+          gridLineColor: '#0A73AF',
+          title: {
+            text: null,
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '18px'
+            }
+          }
+        },
+        yAxis: [{
+          title: {
+            text: null,
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '16px'
+            }
+          },
+          lineColor: '#012536', 
+          tickColor: '#012536',
+          gridLineColor: '#0A73AF',
+          tickPositions: [0, 20, 40, 60, 80, 100, 120, 140, 160], // Set static values for the ticks on the second y-axis
+          tickAmount: 8,
+          labels: {
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '16px'
+            }
+          }
+        },
+        {
+          title: {
+            text: '', // Add a title for the second y-axis
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '16px'
+            }
+          },
+          lineColor: '#012536', 
+          tickColor: '#012536',
+          gridLineColor: '#0A73AF',
+          gridLineWidth: 0,
+          tickPositions: [0, 2000, 4000, 6000, 8000, 10000, 12000], // Set static values for the ticks on the second y-axis
+          tickAmount: 8,
+          labels: {
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '16px'
+            },
+            formatter: function() {
+              return this.value.toLocaleString(); // Convert the value to a string with a comma as a thousand separator
+            }
+          },
+          opposite: true // Display the second y-axis on the right side of the chart
+        }],
+        legend: {
+          symbolHeight: 12, // Set the height of the legend symbol to 2
+          symbolWidth: 12, // Set the width of the legend symbol to 30
+          symbolRadius: 0 // Set the radius of the legend symbol to 0
+        },
+        series: [{
+          name: 'Tompkins',
+          data: [143, 112, 132, 93, 116, 115, 81, 92, 102, 100],
+          color: '#F24A00',
+          borderWidth: 0
+        }, {
+          name: '5-Year Average',
+          type: 'line', // Set the type of this series to 'line'
+          data: [null, null, null, 120.6, 119.2, 113.6, 107.4, 99.4, 101.2, 98.0], // Add the data for the line series
+          color: '#FF8C00',
+        },
+        {
+          name: 'NYS 5-Yr Average',
+          type: 'line', // Set the type of this series to 'line'
+          data: [null, null, null, 11241.8, 11119.2, 11286.8, 11198.2, 11145.6, 11234.4, 11420.0], // Add the data for the line series
+          color: '#65A98F',
+          yAxis: 1
+        },
+        {
+          name: 'Upstate 5-Yr Average',
+          type: 'line', // Set the type of this series to 'line'
+          data: [null, null, null, 4938.4, 4857.4, 5042.8, 4957.4, 4994.0, 5101.6, 5254.2], // Add the data for the line series
+          color: '#0A73AF',
+          yAxis: 1
+        }],
+        tooltip: {
+          formatter: function() {
+            return '<tspan style="font-size: 0.8em">' + this.point.category + '</tspan><br>' + this.series.name + ': <b>' + Highcharts.numberFormat(this.y, 0, '.', ',') + '</b> serious injuries';
+          },
+        },
+      });
+    </script>
     <p class="source">source: TSSR (ITSMR)</p>
-</div>
-
-<div class="chart-container" id="chart4">
-  <h2>Fatalities per 100M VMT</h2>
-  <img src="/assets/charts/1716298949425-ab03e72b-344c-4694-8aa9-31c6f96f2fda_18.jpg">
+    </div>
+  
+  <div class="chart-container">
+    <h2 class="chart-title">Fatalities per 100 million vehicle miles traveled (VMT) <span>in Tompkins County, Upstate New York and New York State</span></h2>
+    <div id="chart3"></div> <!-- Container for the chart -->
+    <script>
+      Highcharts.chart('chart3', {
+        credits: {
+          enabled: false
+        },
+        chart: {
+          type: 'line',
+          backgroundColor: 'rgba(255, 255, 255, 0)',
+          height: 600
+        },
+        responsive: {
+          rules: [{
+            condition: {
+              maxWidth: 768 // Apply the following chart options if the viewport width is 768px or less
+            },
+            chartOptions: {
+              chart: {
+                height: 400 // Set the chart height to 400px
+              }
+            }
+          }]
+        },
+        title: {
+        text: null,
+        align: 'left',
+        margin: 50,
+        style: {
+          color: '#012536',
+          fontSize: '24px',
+          fontWeight: '800',
+          fontFamily: 'Noto Sans',
+          fontStyle: 'italic'
+        }
+        },
+        xAxis: {
+          categories: ['2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+          lineColor: '#012536',
+          tickColor: '#012536',
+          gridLineColor: '#0A73AF',
+          title: {
+            text: null,
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '18px'
+            }
+          }
+        },
+        yAxis: {
+          title: {
+            text: null,
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '16px'
+            }
+          },
+          lineColor: '#012536', 
+          tickColor: '#012536',
+          gridLineColor: '#0A73AF',
+          tickPositions: [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6], // Set static values for the ticks on the second y-axis
+          tickAmount: 8,
+          labels: {
+            style: {
+              color: '#012536',
+              fontFamily: 'Noto Sans',
+              fontSize: '16px'
+            }
+          }
+        },
+        series: [{
+          name: 'Tompkins',
+          data: [1.39, 1.11, 0.42, 0.96, 0.99, 1.34, 0.73],
+          color: '#F24A00',
+          borderWidth: 0
+        },
+        {
+          name: 'Tompkins 5-Year Average',
+          type: 'line', // Set the type of this series to 'line'
+          data: [null, null, null, null, 0.97, 0.96, 0.89], // Add the data for the line series
+          color: '#FF8C00',
+        },
+        {
+          name: 'NYS',
+          type: 'line', // Set the type of this series to 'line'
+          data: [0.82, 0.76, 0.76, 0.83, 1.09, 1.02, 0.89], // Add the data for the line series
+          color: '#65A98F',
+        },
+        {
+          name: 'NYS 5-Year Average',
+          type: 'line', // Set the type of this series to 'line'
+          data: [null, null, null, null, 0.85, 0.89, 0.92], // Add the data for the line series
+          color: '#0A73AF',
+        },
+        {
+          name: 'Upstate',
+          type: 'line', // Set the type of this series to 'line'
+          data: [0.8, 0.7, 0.7, 0.8, 1.1, 1.0, 0.9], // Add the data for the line series
+          color: '#012536',
+        },
+        {
+          name: 'Upstate 5-Year Average',
+          type: 'line', // Set the type of this series to 'line'
+          data: [null, null, null, null, 0.83, 0.87, 0.91], // Add the data for the line series
+          color: '#8C8C8C',
+        }],
+        tooltip: {
+          formatter: function() {
+            return '<tspan style="font-size: 0.8em">' + this.point.category + '</tspan><br>' + this.series.name + ': <b>' + Highcharts.numberFormat(this.y, 2, '.', ',') + '</b> serious injuries';
+          },
+        },
+      });
+    </script>
     <p class="source">source: TSSR (ITSMR)</p>
-</div>
-
-<div class="chart-container" id="chart5">
-  <h2>Serious Injuries per 100M VMT</h2>
-  <img src="/assets/charts/1716298949425-ab03e72b-344c-4694-8aa9-31c6f96f2fda_19.jpg">
-    <p class="source">source: TSSR (ITSMR)</p>
-</div>
+    </div>
+  
