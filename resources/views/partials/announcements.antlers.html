@@ -1,9 +1,9 @@
 <div class="announcements">
     <h2 class="section-title">{{ partial:svg/announcement }}Announcements</h2>
     <div class="announcement-wrapper">
-        {{ collection:announcements }}
-            <div class="announcement active">
-                <div class="announcement-header">
+        {{ collection:announcements sort="date:desc" }}
+        <div class="announcement">
+            <div class="announcement-header">
                     {{ if announcement_url}}
                         <a href="{{ announcement_url }}">
                         <h3>
