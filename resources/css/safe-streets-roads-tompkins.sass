@@ -379,7 +379,14 @@ nav
     .announcement-content
       max-height: 0px
       overflow: hidden
-      transition: max-height 0.2s ease-in-out  // Increase the duration as needed           
+      transition: max-height 0.2s ease-in-out  // Increase the duration as needed    
+    &.active
+      .dropdown-button
+        svg
+          transform: rotate(0deg)
+      .announcement-content
+        max-height: 1000px
+        overflow: visible       
 .callout-section
   z-index: 1
   position: sticky

@@ -583,6 +583,14 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   -webkit-transition: max-height 0.2s ease-in-out;
   transition: max-height 0.2s ease-in-out;
 }
+.announcements .announcement.active .dropdown-button svg {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.announcements .announcement.active .announcement-content {
+  max-height: 1000px;
+  overflow: visible;
+}
 
 .callout-section {
   z-index: 1;
