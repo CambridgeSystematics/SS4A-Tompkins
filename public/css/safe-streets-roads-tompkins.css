@@ -987,3 +987,7 @@ footer .footer-content .copyright {
 .chart-container .source {
   padding: 0 !important;
 }
+
+.survey-container {
+  max-height: 700px;
+}
