@@ -94,7 +94,7 @@ p {
   overflow: hidden;
 }
 .sticky-nav.nav-small.menu-small-active {
-  height: 10em;
+  height: 12rem;
 }
 .sticky-nav.nav-small .logo {
   width: 100%;
@@ -204,7 +204,7 @@ nav .nav-wrap .links .nav-item a {
   color: #FFF;
   text-align: center;
   font-family: "Noto Sans";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 500;
   text-decoration: none;
@@ -256,7 +256,7 @@ nav .nav-wrap .links .nav-item.active a svg {
           transform: translateX(0);
 }
 nav .nav-wrap .links .nav-item.home a::before {
-  background: #0A73AF !important;
+  background: #012536 !important;
 }
 nav .nav-wrap .links .nav-item.resources a::before {
   background: #F24A00 !important;
@@ -266,6 +266,9 @@ nav .nav-wrap .links .nav-item.project-materials a::before {
 }
 nav .nav-wrap .links .nav-item.safety-feedback-map a::before {
   background: #65A98F !important;
+}
+nav .nav-wrap .links .nav-item.contact-us a::before {
+  background: #0A73AF !important;
 }
 nav.sticky-nav {
   height: 3rem;
@@ -291,7 +294,7 @@ nav.sticky-nav .links {
   margin: 10px 0;
 }
 nav.sticky-nav .links .nav-item {
-  margin: 0 1em;
+  margin: 0 0.25rem;
 }
 nav.sticky-nav .links .nav-item a {
   font-size: 1rem;
@@ -825,7 +828,7 @@ footer .footer-content .copyright {
     padding: 0;
   }
   .hero .hero-header .nav-wrap .links li a {
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
   .hero .hero-content p {

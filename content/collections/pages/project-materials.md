@@ -5,7 +5,7 @@ template: page
 title: 'Project Materials'
 author: b996fbb7-6158-4be5-b58b-7f5ccae6509f
 updated_by: b996fbb7-6158-4be5-b58b-7f5ccae6509f
-updated_at: 1716393941
+updated_at: 1722367544
 parent: home
 has_icon: true
 content:
@@ -23,7 +23,7 @@ content:
             content:
               -
                 type: text
-                text: 'Document Review Memo: '
+                text: 'Document Review Memo'
           -
             type: bulletList
             content:
@@ -82,7 +82,7 @@ content:
             content:
               -
                 type: text
-                text: 'Data Analysis Approach Memo: '
+                text: 'Data Analysis Approach Memo'
           -
             type: bulletList
             content:
@@ -103,6 +103,34 @@ content:
                               target: null
                               title: null
                         text: 'TompkinsSS4A_Data Analysis Approach Memo.pdf'
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Tompkins Joint Safety Action Plan Public Meeting Powerpoint Presentation (July 24, 2024)'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: link
+                            attrs:
+                              href: /assets/ppt/tompkins_ss4a_public-meeting_july24.pptx
+                              rel: null
+                              target: null
+                              title: null
+                        text: 'Tompkins_SS4A_Public Meeting_July24.pptx'
         position: Right
         image: sst-graphic3.svg
   -

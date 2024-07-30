@@ -80,7 +80,7 @@ p
     background: linear-gradient(180deg, $dark-blue 95%, #97B7C8 100%)
     overflow: hidden
     &.menu-small-active
-      height: 10em
+      height: 12rem
     .logo
       width: 100%
       display: flex
@@ -139,7 +139,7 @@ nav
           color: #FFF
           text-align: center
           font-family: "Noto Sans"
-          font-size: 1.5rem
+          font-size: 1.2rem
           font-style: normal
           font-weight: 500
           text-decoration: none
@@ -183,7 +183,7 @@ nav
               transform: translateX(0)
         &.home
           a::before
-            background: $blue !important
+            background: $dark-blue !important
         &.resources
           a::before
             background: $tangerine !important
@@ -193,6 +193,10 @@ nav
         &.safety-feedback-map
           a::before
             background: $green !important
+        &.contact-us
+          a::before
+            background: $blue !important
+          
   &.sticky-nav
     height: 3rem
     background: linear-gradient(180deg, $dark-blue 90%, #97B7C8 100%)
@@ -209,7 +213,7 @@ nav
     .links
       margin: 10px 0
       .nav-item
-        margin: 0 1em
+        margin: 0 .25rem
         a
           font-size: 1rem
           margin: 0
@@ -536,7 +540,7 @@ footer
         .links
           padding: 0
           li a
-            font-size: 1.25rem 
+            font-size: 1rem 
             text-shadow: ( 0px 0px 5px rgba(0, 0, 0, .2))
     .hero-content
       p
