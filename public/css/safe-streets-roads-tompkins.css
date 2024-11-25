@@ -586,6 +586,9 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   -webkit-transition: max-height 0.2s ease-in-out;
   transition: max-height 0.2s ease-in-out;
 }
+.announcements .announcement .announcement-content img {
+  max-width: 600px;
+}
 .announcements .announcement.active .dropdown-button svg {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
