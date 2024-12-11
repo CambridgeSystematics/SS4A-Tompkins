@@ -5,7 +5,7 @@ template: page
 title: 'Project Materials'
 author: b996fbb7-6158-4be5-b58b-7f5ccae6509f
 updated_by: b996fbb7-6158-4be5-b58b-7f5ccae6509f
-updated_at: 1722367544
+updated_at: 1733951104
 parent: home
 has_icon: true
 content:
@@ -131,6 +131,34 @@ content:
                               target: null
                               title: null
                         text: 'Tompkins_SS4A_Public Meeting_July24.pptx'
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Tompkins Joint Safety Action Plan Public Meeting Powerpoint Presentation (December 9, 2024)'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: link
+                            attrs:
+                              href: /assets/pdfs/tompkinsss4a_decemberpublicmeeting.pptx
+                              rel: null
+                              target: null
+                              title: null
+                        text: tompkinsss4a_decemberpublicmeeting.pptx
         position: Right
         image: sst-graphic3.svg
   -
