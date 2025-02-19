@@ -5,7 +5,7 @@ template: page
 title: 'Project Materials'
 author: b996fbb7-6158-4be5-b58b-7f5ccae6509f
 updated_by: b996fbb7-6158-4be5-b58b-7f5ccae6509f
-updated_at: 1733951104
+updated_at: 1739986554
 parent: home
 has_icon: true
 content:
@@ -103,6 +103,34 @@ content:
                               target: null
                               title: null
                         text: 'TompkinsSS4A_Data Analysis Approach Memo.pdf'
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Network Screening and Systemic Analysis Memo'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: link
+                            attrs:
+                              href: /assets/pdfs/tompkins_network_screening_memo_final.pdf
+                              rel: null
+                              target: null
+                              title: null
+                        text: Tompkins_Network_Screening_Memo_Final.pdf
           -
             type: heading
             attrs:
