@@ -5,7 +5,7 @@ template: page
 title: 'Project Materials'
 author: b996fbb7-6158-4be5-b58b-7f5ccae6509f
 updated_by: b996fbb7-6158-4be5-b58b-7f5ccae6509f
-updated_at: 1739986554
+updated_at: 1740174000
 parent: home
 has_icon: true
 content:
@@ -131,6 +131,34 @@ content:
                               target: null
                               title: null
                         text: Tompkins_Network_Screening_Memo_Final.pdf
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Policy Review and Recommendations Memo'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: link
+                            attrs:
+                              href: /assets/pdfs/tompkins_ss4a_policyrecommendationsmemo_final.pdf
+                              rel: null
+                              target: null
+                              title: null
+                        text: Tompkins_SS4A_PolicyRecommendationsMemo_Final.pdf
           -
             type: heading
             attrs:
