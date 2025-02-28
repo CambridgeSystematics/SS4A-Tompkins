@@ -5,7 +5,7 @@ template: page
 title: 'Project Materials'
 author: b996fbb7-6158-4be5-b58b-7f5ccae6509f
 updated_by: b996fbb7-6158-4be5-b58b-7f5ccae6509f
-updated_at: 1740174000
+updated_at: 1740759494
 parent: home
 has_icon: true
 content:
@@ -126,7 +126,7 @@ content:
                           -
                             type: link
                             attrs:
-                              href: /assets/pdfs/tompkins_network_screening_memo_final.pdf
+                              href: /assets/pdfs/tompkins_network_screening_memo_final_v2.pdf
                               rel: null
                               target: null
                               title: null
