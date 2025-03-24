@@ -264,7 +264,7 @@ nav .nav-wrap .links .nav-item.resources a::before {
 nav .nav-wrap .links .nav-item.project-materials a::before {
   background: #FF8C00 !important;
 }
-nav .nav-wrap .links .nav-item.safety-feedback-map a::before {
+nav .nav-wrap .links .nav-item.safety-feedback-map a::before, nav .nav-wrap .links .nav-item.safety-data-dashboard a::before {
   background: #65A98F !important;
 }
 nav .nav-wrap .links .nav-item.contact-us a::before {
@@ -736,13 +736,17 @@ footer .footer-content .copyright {
   color: white;
 }
 
-.maps-page .page-content {
+.maps-page .page-content, .safety-data-dashboard-page .page-content {
   background: #0A73AF;
+  margin: 0;
+  padding: 2rem 4rem;
 }
-.maps-page .page-content iframe {
+.maps-page .page-content iframe, .safety-data-dashboard-page .page-content iframe {
   border: #FF8C00 2px solid;
   -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  margin: 0 auto;
+  display: block;
 }
 
 @media (max-width: 1301px) {

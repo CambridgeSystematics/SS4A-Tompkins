@@ -190,7 +190,7 @@ nav
         &.project-materials
           a::before
             background: $orange !important
-        &.safety-feedback-map
+        &.safety-feedback-map, &.safety-data-dashboard
           a::before
             background: $green !important
         &.contact-us
@@ -492,12 +492,16 @@ footer
         pointer-events: none
     .copyright
       color: white
-.maps-page
+.maps-page, .safety-data-dashboard-page
   .page-content
     background: $blue
+    margin: 0
+    padding: 2rem 4rem
     iframe
       border: $orange 2px solid
       filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, .5))
+      margin: 0 auto
+      display: block
 
 // Media Query 1300px
 @media (max-width: 1301px)
