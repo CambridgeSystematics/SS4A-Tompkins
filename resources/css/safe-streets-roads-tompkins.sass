@@ -368,15 +368,15 @@ nav
         transition: transform 0.2s ease-out
         &.rotate
           transform: rotate(0deg)
-    &:nth-child(1n)
-      box-shadow: 5px 5px 0px 0px $tangerine
-      .dropdown-button
-        background: $tangerine
-    &:nth-child(2n)
+    &:nth-child(3n-1)
       box-shadow: 5px 5px 0px 0px $orange
       .dropdown-button
         background: $orange
-    &:nth-child(3n)
+    &:nth-child(3n-2)
+      box-shadow: 5px 5px 0px 0px $tangerine
+      .dropdown-button
+        background: $tangerine
+    &:nth-child(3n-3)
       box-shadow: 5px 5px 0px 0px $green
       .dropdown-button
         background: $green
@@ -391,7 +391,7 @@ nav
         svg
           transform: rotate(0deg)
       .announcement-content
-        max-height: 1000px
+        max-height: 1200px
         overflow: visible       
 .callout-section
   z-index: 1

@@ -559,25 +559,25 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
-.announcements .announcement:nth-child(1n) {
-  -webkit-box-shadow: 5px 5px 0px 0px #F24A00;
-          box-shadow: 5px 5px 0px 0px #F24A00;
-}
-.announcements .announcement:nth-child(1n) .dropdown-button {
-  background: #F24A00;
-}
-.announcements .announcement:nth-child(2n) {
+.announcements .announcement:nth-child(3n-1) {
   -webkit-box-shadow: 5px 5px 0px 0px #FF8C00;
           box-shadow: 5px 5px 0px 0px #FF8C00;
 }
-.announcements .announcement:nth-child(2n) .dropdown-button {
+.announcements .announcement:nth-child(3n-1) .dropdown-button {
   background: #FF8C00;
 }
-.announcements .announcement:nth-child(3n) {
+.announcements .announcement:nth-child(3n-2) {
+  -webkit-box-shadow: 5px 5px 0px 0px #F24A00;
+          box-shadow: 5px 5px 0px 0px #F24A00;
+}
+.announcements .announcement:nth-child(3n-2) .dropdown-button {
+  background: #F24A00;
+}
+.announcements .announcement:nth-child(3n-3) {
   -webkit-box-shadow: 5px 5px 0px 0px #65A98F;
           box-shadow: 5px 5px 0px 0px #65A98F;
 }
-.announcements .announcement:nth-child(3n) .dropdown-button {
+.announcements .announcement:nth-child(3n-3) .dropdown-button {
   background: #65A98F;
 }
 .announcements .announcement .announcement-content {
@@ -594,7 +594,7 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
           transform: rotate(0deg);
 }
 .announcements .announcement.active .announcement-content {
-  max-height: 1000px;
+  max-height: 1200px;
   overflow: visible;
 }
 
