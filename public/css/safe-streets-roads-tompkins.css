@@ -594,7 +594,7 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
           transform: rotate(0deg);
 }
 .announcements .announcement.active .announcement-content {
-  max-height: 1200px;
+  max-height: 1500px;
   overflow: visible;
 }
 
