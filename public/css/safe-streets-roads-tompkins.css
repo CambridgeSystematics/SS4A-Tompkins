@@ -94,7 +94,7 @@ p {
   overflow: hidden;
 }
 .sticky-nav.nav-small.menu-small-active {
-  height: 12rem;
+  height: 14rem;
 }
 .sticky-nav.nav-small .logo {
   width: 100%;
@@ -267,8 +267,8 @@ nav .nav-wrap .links .nav-item.project-materials a::before {
 nav .nav-wrap .links .nav-item.safety-feedback-map a::before, nav .nav-wrap .links .nav-item.safety-data-dashboard a::before {
   background: #65A98F !important;
 }
-nav .nav-wrap .links .nav-item.contact-us a::before {
-  background: #0A73AF !important;
+nav .nav-wrap .links .nav-item.review-plan a::before {
+  background: #7a4456 !important;
 }
 nav.sticky-nav {
   height: 3rem;
@@ -818,7 +818,7 @@ footer .footer-content .copyright {
     display: none;
   }
 }
-@media (max-width: 1201px) {
+@media (max-width: 1600px) {
   .site-wrap {
     max-width: 100%;
   }
@@ -880,6 +880,14 @@ footer .footer-content .copyright {
     border: #FF8C00 1px solid;
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
             filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+  }
+}
+@media (min-width: 769px) {
+  .homepage .site-wrap {
+    margin-top: 0;
+  }
+  .homepage nav.sticky-nav {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -997,4 +1005,5 @@ footer .footer-content .copyright {
 
 .survey-container {
   max-height: 700px;
+  overflow: hidden;
 }

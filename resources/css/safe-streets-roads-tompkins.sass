@@ -80,7 +80,7 @@ p
     background: linear-gradient(180deg, $dark-blue 95%, #97B7C8 100%)
     overflow: hidden
     &.menu-small-active
-      height: 12rem
+      height: 14rem
     .logo
       width: 100%
       display: flex
@@ -193,9 +193,9 @@ nav
         &.safety-feedback-map, &.safety-data-dashboard
           a::before
             background: $green !important
-        &.contact-us
+        &.review-plan
           a::before
-            background: $blue !important
+            background: #7a4456 !important
           
   &.sticky-nav
     height: 3rem
@@ -535,7 +535,7 @@ footer
         .links
           display: none
 // Media Query 1200px
-@media (max-width: 1201px)
+@media (max-width: 1600px)
   .site-wrap
     max-width: 100%
   .hero
@@ -582,6 +582,13 @@ footer
       filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .5))
 
 // Media Query 768px
+@media (min-width: 769px)
+  .homepage
+    .site-wrap
+      margin-top: 0
+    nav.sticky-nav
+      display: none
+
 @media (max-width: 768px)
   .hero .hero-content
     margin: 2rem
@@ -672,3 +679,4 @@ footer
 
 .survey-container
   max-height: 700px
+  overflow: hidden
