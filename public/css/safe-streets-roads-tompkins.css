@@ -267,7 +267,7 @@ nav .nav-wrap .links .nav-item.project-materials a::before {
 nav .nav-wrap .links .nav-item.safety-feedback-map a::before, nav .nav-wrap .links .nav-item.safety-data-dashboard a::before {
   background: #65A98F !important;
 }
-nav .nav-wrap .links .nav-item.review-plan a::before {
+nav .nav-wrap .links .nav-item.review-plan a::before, nav .nav-wrap .links .nav-item.contact-us a::before {
   background: #7a4456 !important;
 }
 nav.sticky-nav {
