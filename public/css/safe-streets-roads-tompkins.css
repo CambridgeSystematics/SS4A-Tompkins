@@ -213,6 +213,8 @@ nav .nav-wrap .links .nav-item a {
   padding: 0.25em 0.5em;
   overflow: hidden;
   position: relative;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
 }
 nav .nav-wrap .links .nav-item a svg {
   width: 1rem;
@@ -267,8 +269,11 @@ nav .nav-wrap .links .nav-item.project-materials a::before {
 nav .nav-wrap .links .nav-item.safety-feedback-map a::before, nav .nav-wrap .links .nav-item.safety-data-dashboard a::before {
   background: #65A98F !important;
 }
-nav .nav-wrap .links .nav-item.review-plan a::before, nav .nav-wrap .links .nav-item.contact-us a::before {
+nav .nav-wrap .links .nav-item.review-plan a::before {
   background: #7a4456 !important;
+}
+nav .nav-wrap .links .nav-item.contact-us a::before {
+  background: #0A73AF !important;
 }
 nav.sticky-nav {
   height: 3rem;
@@ -835,7 +840,6 @@ footer .footer-content .copyright {
     padding: 0;
   }
   .hero .hero-header .nav-wrap .links li a {
-    font-size: 1rem;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
   .hero .hero-content p {
@@ -978,6 +982,18 @@ footer .footer-content .copyright {
   }
   .charts-section .chart-container .source {
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  nav .nav-wrap .links {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav .nav-wrap .links .nav-item {
+    margin: 1rem 0;
   }
 }
 .chart-container {

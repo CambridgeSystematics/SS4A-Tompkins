@@ -148,6 +148,7 @@ nav
           padding: .25em .5em
           overflow: hidden
           position: relative
+          filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .25))
           svg
             width: 1rem
             margin-right: 5px
@@ -193,9 +194,12 @@ nav
         &.safety-feedback-map, &.safety-data-dashboard
           a::before
             background: $green !important
-        &.review-plan, &.contact-us
+        &.review-plan
           a::before
             background: #7a4456 !important
+        &.contact-us
+          a::before
+            background: $blue !important
           
   &.sticky-nav
     height: 3rem
@@ -546,7 +550,7 @@ footer
         .links
           padding: 0
           li a
-            font-size: 1rem 
+            // font-size: 1rem 
             text-shadow: ( 0px 0px 5px rgba(0, 0, 0, .2))
     .hero-content
       p
@@ -653,7 +657,13 @@ footer
       .source
         font-size: .8rem
 
-
+@media (min-width: 768px) and (max-width: 1200px)
+  nav .nav-wrap .links
+    flex-wrap: wrap
+    justify-content: center
+    .nav-item
+      margin: 1rem 0
+      
 //temp chart css
 
 .chart-container
