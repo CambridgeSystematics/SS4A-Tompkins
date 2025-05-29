@@ -593,6 +593,7 @@ nav.sticky-nav .links .nav-item.scroll-to-top a::before {
 }
 .announcements .announcement .announcement-content img {
   max-width: 600px;
+  width: 100%;
 }
 .announcements .announcement.active .dropdown-button svg {
   -webkit-transform: rotate(0deg);
